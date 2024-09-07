@@ -1,0 +1,41 @@
+footer {
+    width: 100%;
+    height: 62vh;
+    display: flex;
+    align-items: center;
+  
+    .mainFooterTable {
+      display: flex;
+      justify-content: center;
+      width: 450px;
+  
+      h2 {
+        transition: 0.2s all ease-in-out;
+        font-size: 1.3rem;
+      }
+      h2:hover {
+        color: #ff6117;
+      }
+    }
+    .usefulLinks,
+    .myAccount {
+      ul {
+        li {
+          transition: 0.2s all ease-in-out;
+        }
+        li:hover {
+          color: #ff6117;
+        }
+      }
+    }
+    .bedrock {
+      .privacyPolicy {
+        h1 {
+          transition: 0.2s all ease-in-out;
+        }
+        h1:hover {
+          color: #ff6117;
+        }
+      }
+    }
+  }

@@ -1,8 +1,10 @@
-
-
 // Called React Libraries goes here
 import React from 'react'
 import MainContainer from './mainContainer';
+
+
+// Stylesheet for this file
+import "../Stylesheets/footer.scss"
 
 
 // Called Local Image from Local-Images folder
