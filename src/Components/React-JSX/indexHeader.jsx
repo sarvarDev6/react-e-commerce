@@ -2,10 +2,18 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import MainContainer from './mainContainer';
-import { Carousel } from "flowbite-react";
+
+
+// StyleSheet for this react file
+import "../Stylesheets/indexHeader.scss";
+
+
+// Called Local Image from Local-Images folder
 import openShopLogo from "../Local-Images/open-shop-logo.png";
+import IndexMainSlider from './indexMainSlider';
 
 function IndexHeader() {
+
     const [sliderData, setSliderData] = useState([]);
 
 
@@ -14,6 +22,9 @@ function IndexHeader() {
         axios.get('http://127.0.0.1:8000/api/slider')
             .then(res => setSliderData(res.data));
     }, []);
+
+
+
 
     return (
         <header>
@@ -70,9 +81,41 @@ function IndexHeader() {
                 <MainContainer>
                     <div className="flex items-center justify-between">
                         <div className='flex items-center gap-5'>
-                            <div className="allCate w-72 h-14 p-5 flex items-center justify-between bg-slate-100 hover: cursor-pointer">
-                                <h1 className='font-semibold'><i class="fa-solid fa-list-ul text-gray-600 mr-2"></i> ALL CATEGORIES</h1>
-                                <i class="fa-solid fa-chevron-down text-gray-500 text-xs"></i>
+                            <div className="dropDownMenu">
+                                <div className="allCate w-72 h-14 flex items-center justify-between bg-slate-100 hover: cursor-pointer">
+                                    <div className="p-5 flex items-center justify-between w-72">
+                                        <h1 className='font-semibold'><i class="fa-solid fa-list-ul text-gray-600 mr-2"></i> ALL CATEGORIES</h1>
+                                        <i class="fa-solid fa-chevron-down text-gray-500 text-xs"></i>
+                                    </div>
+                                    <div className="dropDownContent w-72 bg-white absolute z-40">
+                                        <ol className='leading-8 text-gray-600'>
+                                            <div className='liDiv-1'>
+                                                <li className='font-bold hover: cursor-pointer p-2'><span><i class="fa-solid fa-mobile text-gray-600"></i> Phone</span> <i class="fa-solid fa-chevron-right text-xs"></i></li>
+                                                <div className="phoneMoreCategory bg-white p-5 absolute ml-72">
+                                                    <h2 className='font-semibold text-xl relative'>Phones</h2>
+                                                    <ol>
+                                                        <li>Xiaomi</li>
+                                                        <li>Apple</li>
+                                                        <li>Samsung</li>
+                                                        <li>Honor</li>
+                                                        <li>Tecno</li>
+                                                        <li>Infinix</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <li className='font-bold hover: cursor-pointer p-2'><span><i class="fa-solid fa-tablet text-gray-600"></i> Tablets</span> <i class="fa-solid fa-chevron-right text-xs"></i></li>
+                                            <hr />
+                                            <li className='font-bold hover: cursor-pointer p-2'><span><i class="fa-solid fa-laptop text-gray-600"></i> Laptops</span> <i class="fa-solid fa-chevron-right text-xs"></i></li>
+                                            <hr />
+                                            <li className='font-bold hover: cursor-pointer p-2'><span><i class="fa-regular fa-clock text-gray-600"></i> Watches</span> <i class="fa-solid fa-chevron-right text-xs"></i></li>
+                                            <hr />
+                                            <li className='font-bold hover: cursor-pointer p-2'><span><i class="fa-solid fa-headphones-simple text-gray-600"></i> Accessurs and gadgets</span> <i class="fa-solid fa-chevron-right text-xs"></i></li>
+                                            <hr />
+                                            <li className='font-bold hover: cursor-pointer p-2'><span><i class="fa-solid fa-screwdriver-wrench text-gray-600"></i> PC Equipment</span> <i class="fa-solid fa-chevron-right text-xs"></i></li>
+                                        </ol>
+                                    </div>
+                                </div>
                             </div>
                             <ul className='flex gap-7'>
                                 <li className='active hover: cursor-pointer'>Home</li>
@@ -86,37 +129,7 @@ function IndexHeader() {
                 </MainContainer>
             </nav>
             <MainContainer>
-                <div className="flex gap-7">
-                    <div className="dropDownMenu w-72">
-                        <ul>
-                            <li className='cateLis'><i class="fa-solid fa-mobile"></i> Phones</li>
-                            <hr />
-                            <li className='cateLis'><i class="fa-solid fa-tablet"></i> Tablets</li>
-                            <hr />
-                            <li className='cateLis'><i class="fa-solid fa-laptop"></i> Laptops</li>
-                            <hr />
-                            <li className='cateLis'><i class="fa-regular fa-clock"></i> Watches</li>
-                            <hr />
-                            <li className='cateLis'><i class="fa-solid fa-headphones-simple"></i> Accessuars</li>
-                            <hr />
-                            <li className='cateLis'><i class="fa-solid fa-screwdriver-wrench"></i> PC Equipments</li>
-                            <hr />
-                        </ul>
-                    </div>
-                    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-                        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-                            <Carousel>
-                                {
-                                    sliderData.map((item) => {
-                                        return (
-                                            <img className='w-6/12 mt-5 rounded-lg' src={item.img}></img>
-                                        )
-                                    })
-                                }
-                            </Carousel>
-                        </div>
-                    </div>
-                </div>
+                <IndexMainSlider sliderData={sliderData} />
             </MainContainer>
         </header>
     )

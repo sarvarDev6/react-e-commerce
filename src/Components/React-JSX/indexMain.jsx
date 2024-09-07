@@ -4,6 +4,10 @@ import MainContainer from './mainContainer';
 import axios from 'axios';
 
 
+// StyleSheet for this react file
+import "../Stylesheets/indexMain.scss"
+
+
 // Called Local Image from Local-Images folder
 import warrantyForTenYears from "../Local-Images/warranty_10year_uz.png";
 import xiaomi from "../Local-Images/xiaomi.jpg";
@@ -40,7 +44,7 @@ function IndexMain() {
     return (
         <main className='mt-10 mb-10'>
             <MainContainer>
-                <div className="topCategories flex mb-20">
+                <div className="topCategories flex mb-20 mt-44">
                     <div className="xiaomi w-full p-1">
                         <img className='rounded-xl hover: cursor-pointer' src={xiaomi}></img>
                     </div>
@@ -79,7 +83,7 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={xiaomiProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                     <div className="samsung">
                         <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Samsung</h1>
@@ -99,7 +103,7 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={samsungProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                     <div className="apple">
                         <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Apple</h1>
@@ -119,7 +123,7 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={appleProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                     <div className="honor">
                         <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Honor</h1>
@@ -139,7 +143,7 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={honorProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                     <div className="tecno">
                         <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Tecno</h1>
@@ -159,7 +163,7 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={tecnoProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                     <div className="infinix">
                         <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Infinix</h1>
@@ -179,7 +183,7 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={infinixProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                     <div className="laptop">
                         <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Laptops</h1>
@@ -199,7 +203,7 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={laptopProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                     <div className="pcEquipment">
                         <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>PC Equipment</h1>
@@ -218,7 +222,7 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={pcEquipmentProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                     <div className="watch">
                         <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Watches</h1>
@@ -237,10 +241,10 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={watchProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                     <div className="accessuar">
-                        <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>accessuars</h1>
+                        <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Accessuars and Gadgets</h1>
                         <div className="accessuarProductsContainer flex flex-wrap">
                             {
                                 accessuarProducts.map(item => (
@@ -256,7 +260,7 @@ function IndexMain() {
                                 ))
                             }
                         </div>
-                        <button className='loadMoreBtn'><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
+                        <button className={accessuarProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i class="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
                     </div>
                 </div>
                 <div className="infoSection">
