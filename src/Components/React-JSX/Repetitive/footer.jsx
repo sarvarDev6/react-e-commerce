@@ -1,19 +1,20 @@
 // Called React Libraries goes here
 import React from 'react'
 import MainContainer from './mainContainer';
+import { Link } from 'react-router-dom';
 
 
 // Stylesheet for this file
-import "../Stylesheets/footer.scss"
+import "../../Stylesheets/footer.scss"
 
 
 // Called Local Image from Local-Images folder
-import openShopLogo from "../Local-Images/open-shop-logo.png";
-import visaLogo from "../Local-Images/ft_visa.png";
-import masterCardLogo from "../Local-Images/ft_mastercard.png";
-import unionPayLogo from "../Local-Images/ft_unionpay.png";
-import uzcardLogo from "../Local-Images/ft_uzcard.png";
-import humoLogo from "../Local-Images/ft_humo.png";
+import openShopLogo from "../../Local-Images/open-shop-logo.png";
+import visaLogo from "../../Local-Images/ft_visa.png";
+import masterCardLogo from "../../Local-Images/ft_mastercard.png";
+import unionPayLogo from "../../Local-Images/ft_unionpay.png";
+import uzcardLogo from "../../Local-Images/ft_uzcard.png";
+import humoLogo from "../../Local-Images/ft_humo.png";
 
 function Footer() {
     return (
@@ -30,19 +31,19 @@ function Footer() {
                             <h2 className='font-bold text-gray-600 mb-5 hover: cursor-pointer'>info@openshop.uz</h2>
                             <div className="socialChannels flex justify-center gap-2">
                                 <div className="facebook bg-blue-700 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
-                                    <i class="fa-brands fa-facebook"></i>
+                                    <i className="fa-brands fa-facebook"></i>
                                 </div>
                                 <div className="telegram bg-teal-400 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
-                                    <i class="fa-brands fa-telegram"></i>
+                                    <i className="fa-brands fa-telegram"></i>
                                 </div>
                                 <div className="instagram bg-red-600 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
-                                    <i class="fa-brands fa-instagram"></i>
+                                    <i className="fa-brands fa-instagram"></i>
                                 </div>
                                 <div className="youtube bg-slate-700 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
-                                    <i class="fa-brands fa-youtube"></i>
+                                    <i className="fa-brands fa-youtube"></i>
                                 </div>
                                 <div className="telegramBot bg-teal-400 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointe">
-                                    <i class="fa-solid fa-robot"></i>
+                                    <i className="fa-solid fa-robot"></i>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +72,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div className="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2995.4909714430437!2d69.35799207654125!3d41.34168099882829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDIwJzMwLjAiTiA2OcKwMjEnMzguMCJF!5e0!3m2!1sen!2s!4v1725558366671!5m2!1sen!2s" width="380" height="300" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2995.4909714430437!2d69.35799207654125!3d41.34168099882829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDIwJzMwLjAiTiA2OcKwMjEnMzguMCJF!5e0!3m2!1sen!2s!4v1725558366671!5m2!1sen!2s" width="380" height="300" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         <h3 className='mt-5 w-96 leading-5 font-light'>Address: Republic of Uzbekistan, Tashkent city, Mirzo-Ulugbek district, Buyuk Ipak Yuli street, 302</h3>
                     </div>
                 </div>

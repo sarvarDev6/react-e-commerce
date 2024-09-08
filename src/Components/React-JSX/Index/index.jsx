@@ -9,18 +9,16 @@
 import React from 'react';
 
 
-
-// StyleSheet for this react file
-import "../Stylesheets/index.scss";
-
 // Called Components
-import Footer from './footer';
-import IndexMain from './indexMain';
+import NavBar from '../Repetitive/navBar';
 import IndexHeader from './indexHeader';
+import IndexMain from './indexMain';
+import Footer from '../Repetitive/footer';
 
 function Index() {
   return (
     <>
+      <NavBar />
       <IndexHeader />
       <IndexMain />
       <Footer />

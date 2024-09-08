@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 //Stylesheet for this file
-import "../Stylesheets/aboutCompanyInfo.scss"
+import "../../Stylesheets/aboutCompanyInfo.scss"
 
 function AboutCompanyInfo() {
     return (
-        <div className="infoSection">
+        <div className="infoSection mb-10">
             <hr className='mb-5' />
             <h1 className='text-2xl font-semibold mb-14'>OPENSHOP.UZ is the best online store for buying electronics in wholesale and retail</h1>
             <div className="aboutCompany text-justify mb-5">
@@ -23,8 +24,8 @@ function AboutCompanyInfo() {
                 <div className="flex gap-2">
                     <ul className='flex gap-1'>
                         <li className='hover: cursor-pointer'><b>Phones:</b></li>
-                        <li className='hover: cursor-pointer'><span>Xiaomi</span>,</li>
-                        <li className='hover: cursor-pointer'><span>Samsung</span>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/xiaomi"><span>Xiaomi</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/samsung"><span>Samsung</span></Link>,</li>
                         <li className='hover: cursor-pointer'><span>Apple</span>,</li>
                         <li className='hover: cursor-pointer'><span>Honor</span>,</li>
                         <li className='hover: cursor-pointer'><span>Tecno</span>,</li>

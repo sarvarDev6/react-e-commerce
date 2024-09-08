@@ -1,0 +1,62 @@
+header {
+  ul:nth-child(1) {
+    li {
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        color: #ff6117;
+      }
+    }
+  }
+  ul:nth-child(2) {
+    li {
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        cursor: pointer;
+        transform: translateX(10px);
+        color: #ff6117;
+      }
+    }
+  }
+
+  .banner {
+    .phones {
+      width: 410px;
+      height: auto;
+      min-height: 250px;
+      border: 1px solid #dddddd;
+
+      h1 {
+        transition: 0.2s all ease-in;
+        &:hover {
+          color: #ff6117;
+        }
+      }
+    }
+    .tablets {
+      width: 410px;
+      height: auto;
+      min-height: 250px;
+      border: 1px solid #dddddd;
+
+      h1 {
+        transition: 0.2s all ease-in;
+        &:hover {
+          color: #ff6117;
+        }
+      }
+    }
+    .radioPhones {
+      width: 410px;
+      height: auto;
+      min-height: 250px;
+      border: 1px solid #dddddd;
+
+      h1 {
+        transition: 0.2s all ease-in;
+        &:hover {
+          color: #ff6117;
+        }
+      }
+    }
+  }
+}

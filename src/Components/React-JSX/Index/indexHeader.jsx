@@ -1,17 +1,17 @@
 // Called React Libraries goes here
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
-import MainContainer from './mainContainer';
+import MainContainer from '../Repetitive/mainContainer';
 
 
 // StyleSheet for this react file
-import "../Stylesheets/indexHeader.scss";
+import "../../Stylesheets/indexHeader.scss";
 
 
 // Called Local Image from Local-Images folder
-import openShopLogo from "../Local-Images/open-shop-logo.png";
+import openShopLogo from "../../Local-Images/open-shop-logo.png";
 import IndexMainSlider from './indexMainSlider';
-import NavBar from './navBar';
+import NavBar from '../Repetitive/navBar';
 
 function IndexHeader() {
 
@@ -29,7 +29,6 @@ function IndexHeader() {
 
     return (
         <header>
-            <NavBar />
             <MainContainer>
                 <IndexMainSlider sliderData={sliderData} />
             </MainContainer>

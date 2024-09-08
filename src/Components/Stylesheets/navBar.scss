@@ -84,10 +84,12 @@
 }
 
 nav {
-  z-index: 1;
-  top: 100px;
+  position: sticky;
+  z-index: 9999;
+  top: 0;
   width: 100%;
   height: 6vh;
+  background-color: #fff;
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
 
@@ -98,6 +100,7 @@ nav {
 
       .liDiv-1 {
         .phoneMoreCategory {
+          border: 1px solid #dddddd;
           display: none;
           transition: 0.2s all ease-in-out;
           margin-left: 18.1rem;
@@ -113,6 +116,7 @@ nav {
       }
       .liDiv-2 {
         .tabletMoreCategory {
+          border: 1px solid #dddddd;
           display: none;
           transition: 0.2s all ease-in-out;
           margin-left: 18.1rem;
@@ -128,6 +132,7 @@ nav {
       }
       .liDiv-3 {
         .laptopMoreCategory {
+          border: 1px solid #dddddd;
           display: none;
           transition: 0.2s all ease-in-out;
           margin-left: 18.1rem;
@@ -143,6 +148,7 @@ nav {
       }
       .liDiv-4 {
         .watchMoreCategory {
+          border: 1px solid #dddddd;
           display: none;
           transition: 0.2s all ease-in-out;
           margin-left: 18.1rem;
@@ -158,6 +164,7 @@ nav {
       }
       .liDiv-5 {
         .accessuarMoreCategory {
+          border: 1px solid #dddddd;
           display: none;
           transition: 0.2s all ease-in-out;
           margin-left: 18.1rem;
@@ -173,6 +180,7 @@ nav {
       }
       .liDiv-6 {
         .equipmentMoreCategory {
+          border: 1px solid #dddddd;
           display: none;
           transition: 0.2s all ease-in-out;
           margin-left: 18.1rem;
