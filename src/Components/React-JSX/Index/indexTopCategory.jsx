@@ -21,16 +21,16 @@ function IndexTopCategory() {
                 <Link to="/shop/samsung"><img className='rounded-xl hover: cursor-pointer' src={samsung}></img></Link>
             </div>
             <div className="apple w-full p-1">
-                <img className='rounded-xl hover: cursor-pointer' src={apple}></img>
+                <Link to="/shop/apple"><img className='rounded-xl hover: cursor-pointer' src={apple}></img></Link>
             </div>
             <div className="honor w-full p-1">
-                <img className='rounded-xl hover: cursor-pointer' src={honor}></img>
+                <Link to="/shop/honor"><img className='rounded-xl hover: cursor-pointer' src={honor}></img></Link>
             </div>
             <div className="tecno w-full p-1">
-                <img className='rounded-xl hover: cursor-pointer' src={tecno}></img>
+                <Link to="/shop/tecno"><img className='rounded-xl hover: cursor-pointer' src={tecno}></img></Link>
             </div>
             <div className="infinix w-full p-1">
-                <img className='rounded-xl hover: cursor-pointer' src={infinix}></img>
+                <Link to="/shop/infinix"><img className='rounded-xl hover: cursor-pointer' src={infinix}></img></Link>
             </div>
         </div>
     )

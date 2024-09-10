@@ -25,7 +25,7 @@ function ShopSamsungMain() {
             .then(res => setProductData(res.data))
     }, [])
 
-    // productData filtering here (samsung)
+    // productData filtering here (xiaomiTab)
     let samsungProducts = productData.filter((item) => item.brand_name == "Samsung" && item.category == "phone");
 
 
@@ -46,8 +46,8 @@ function ShopSamsungMain() {
                         <CiSearch />
                     </div>
                 </div>
-                <div className="xiaomi">
-                    <div className="xiaomiProductsContainer flex flex-wrap">
+                <div className="samsung">
+                    <div className="samsungProductsContainer flex flex-wrap">
                         {
                             samsungProducts.map(item => (
                                 <div key={item.id} className='product text-center'>
@@ -57,6 +57,7 @@ function ShopSamsungMain() {
                                     </div>
                                     <span className='text-gray-500 font-bold'>{item.category}</span>
                                     <h1 >{item.name}</h1>
+                                    <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                     <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                                 </div>
                             ))

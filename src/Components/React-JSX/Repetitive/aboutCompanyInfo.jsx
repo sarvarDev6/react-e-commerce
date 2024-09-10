@@ -23,19 +23,19 @@ function AboutCompanyInfo() {
                 <h1 className='text-xl font-bold text-gray-700 mb-7'>Phones and tablets</h1>
                 <div className="flex gap-2">
                     <ul className='flex gap-1'>
-                        <li className='hover: cursor-pointer'><b>Phones:</b></li>
+                        <Link to="/shop/phones"><li className='hover: cursor-pointer'><b>Phones:</b></li></Link>
                         <li className='hover: cursor-pointer'><Link to="/shop/xiaomi"><span>Xiaomi</span></Link>,</li>
                         <li className='hover: cursor-pointer'><Link to="/shop/samsung"><span>Samsung</span></Link>,</li>
-                        <li className='hover: cursor-pointer'><span>Apple</span>,</li>
-                        <li className='hover: cursor-pointer'><span>Honor</span>,</li>
-                        <li className='hover: cursor-pointer'><span>Tecno</span>,</li>
-                        <li className='hover: cursor-pointer'><span>Infinix</span></li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/apple"><span>Apple</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/honor"><span>Honor</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/tecno"><span>Tecno</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/infinix"><span>Infinix</span></Link></li>
                     </ul>
                     <ul className='flex gap-1'>
-                        <li className='hover: cursor-pointer'><b>Tablets:</b></li>
-                        <li className='hover: cursor-pointer'><span>Xiaomi</span>,</li>
-                        <li className='hover: cursor-pointer'><span>Samsung</span>,</li>
-                        <li className='hover: cursor-pointer'><span>Apple</span></li>
+                        <Link to="/shop/tablets"><li className='hover: cursor-pointer'><b>Tablets:</b></li></Link>
+                        <li className='hover: cursor-pointer'><Link to="/shop/xiaomi-tablets"><span>Xiaomi</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/samsung-tablets"><span>Samsung</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/apple-tablets"><span>Apple</span></Link></li>
                     </ul>
                 </div>
             </div>

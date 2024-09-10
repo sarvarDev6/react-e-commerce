@@ -31,28 +31,25 @@ function ShopHeaderBanner() {
                 <div className="banner flex items-center justify-between">
                     <div className="phones flex items-start justify-between p-5">
                         <div>
-                            <h1 className='text-xl font-bold mb-5 hover: cursor-pointer'>Phones</h1>
+                            <Link to="/shop/phones"><h1 className='text-xl font-bold mb-5 hover: cursor-pointer'>Phones</h1></Link>
                             <ul>
                                 <Link to="/shop/xiaomi"><li className='flex items-center text-gray-700'><BiChevronRight /> Xiaomi</li></Link>
                                 <Link to="/shop/samsung"><li className='flex items-center text-gray-700'><BiChevronRight /> Samsung</li></Link>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Apple</li>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Honor</li>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Tecno</li>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Infinix</li>
+                                <Link to="/shop/apple"><li className='flex items-center text-gray-700'><BiChevronRight /> Apple</li></Link>
+                                <Link to="/shop/honor"><li className='flex items-center text-gray-700'><BiChevronRight /> Honor</li></Link>
+                                <Link to="/shop/tecno"><li className='flex items-center text-gray-700'><BiChevronRight /> Tecno</li></Link>
+                                <Link to="/shop/infinix"><li className='flex items-center text-gray-700'><BiChevronRight /> Infinix</li></Link>
                             </ul>
                         </div>
                         <img className='w-28' src={shopBannerPhones}></img>
                     </div>
                     <div className="tablets flex items-start justify-between p-5">
                         <div>
-                            <h1 className='text-xl font-bold mb-5 hover: cursor-pointer'>Tablets</h1>
+                            <Link to="/shop/tablets"><h1 className='text-xl font-bold mb-5 hover: cursor-pointer'>Tablets</h1></Link>
                             <ul>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Xiaomi</li>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Samsung</li>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Apple</li>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Honor</li>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Tecno</li>
-                                <li className='flex items-center text-gray-700'><BiChevronRight /> Infinix</li>
+                                <Link to="/shop/xiaomi-tablets"><li className='flex items-center text-gray-700'><BiChevronRight /> Xiaomi</li></Link>
+                                <Link to="/shop/samsung-tablets"><li className='flex items-center text-gray-700'><BiChevronRight /> Samsung</li></Link>
+                                <Link to="/shop/apple-tablets"><li className='flex items-center text-gray-700'><BiChevronRight /> Apple</li></Link>
                             </ul>
                         </div>
                         <img className='w-28' src={shopBannerTablets}></img>

@@ -49,6 +49,7 @@ function IndexProducts() {
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
+                                <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))

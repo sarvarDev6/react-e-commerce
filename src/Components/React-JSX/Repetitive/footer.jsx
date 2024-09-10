@@ -28,23 +28,33 @@ function Footer() {
                             <p className='text-gray-500 leading-7 mb-5'>OPENSHOP.UZ online store with a large selection of electronics in wholesale and retail</p>
                             <h2 className='font-bold text-gray-600 mb-2 hover: cursor-pointer'>+998 (71) 203 66 60</h2>
                             <h2 className='font-bold text-gray-600 mb-2 hover: cursor-pointer'>+998 (99) 200 66 60</h2>
-                            <h2 className='font-bold text-gray-600 mb-5 hover: cursor-pointer'>info@openshop.uz</h2>
+                            <a href='mailto:info@openshop.uz' target='_blank'><h2 className='font-bold text-gray-600 mb-5 hover: cursor-pointer'>info@openshop.uz</h2></a>
                             <div className="socialChannels flex justify-center gap-2">
-                                <div className="facebook bg-blue-700 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
-                                    <i className="fa-brands fa-facebook"></i>
-                                </div>
-                                <div className="telegram bg-teal-400 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
-                                    <i className="fa-brands fa-telegram"></i>
-                                </div>
-                                <div className="instagram bg-red-600 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
-                                    <i className="fa-brands fa-instagram"></i>
-                                </div>
-                                <div className="youtube bg-slate-700 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
-                                    <i className="fa-brands fa-youtube"></i>
-                                </div>
-                                <div className="telegramBot bg-teal-400 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointe">
-                                    <i className="fa-solid fa-robot"></i>
-                                </div>
+                                <a href="https://www.facebook.com/openshop.uz" target='_blank'>
+                                    <div className="facebook bg-blue-700 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
+                                        <i className="fa-brands fa-facebook"></i>
+                                    </div>
+                                </a>
+                                <a href="https://t.me/openshop_uz" target='_blank'>
+                                    <div className="telegram bg-teal-400 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
+                                        <i className="fa-brands fa-telegram"></i>
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/openshop_uz/">
+                                    <div className="instagram bg-red-600 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
+                                        <i className="fa-brands fa-instagram"></i>
+                                    </div>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCk85inH6V1-6Hq3E8cSR3tQ">
+                                    <div className="youtube bg-slate-700 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
+                                        <i className="fa-brands fa-youtube"></i>
+                                    </div>
+                                </a>
+                                <a href="https://t.me/openshopuz_bot">
+                                    <div className="telegramBot bg-teal-400 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointe">
+                                        <i className="fa-solid fa-robot"></i>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

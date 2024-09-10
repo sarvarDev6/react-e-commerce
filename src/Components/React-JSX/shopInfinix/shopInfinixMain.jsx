@@ -5,7 +5,7 @@ import MainContainer from '../Repetitive/mainContainer';
 
 
 // Stylesheet for this file
-import "../../Stylesheets/shopXiaomiMain.scss";
+import "../../Stylesheets/shopInfinix/shopInfinixMain.scss";
 
 
 // Locally called images
@@ -16,7 +16,7 @@ import warrantyForTenYears from "../../Local-Images/warranty_10year_uz.png"
 import { CiSearch } from "react-icons/ci";
 import AboutCompanyInfo from '../Repetitive/aboutCompanyInfo';
 
-function ShopXiaomiMain() {
+function ShopInfinixMain() {
 
     const [productData, setProductData] = useState([]);
 
@@ -25,10 +25,8 @@ function ShopXiaomiMain() {
             .then(res => setProductData(res.data))
     }, [])
 
-    // productData filtering here (xiaomi)
-    let xiaomiProducts = productData.filter((item) => item.brand_name == "Xiaomi" && item.category == "phone");
-
-
+    // productData filtering here (samsung)
+    let infinixProducts = productData.filter((item) => item.brand_name == "Infinix" && item.category == "phone");
 
     return (
         <main>
@@ -47,10 +45,10 @@ function ShopXiaomiMain() {
                         <CiSearch />
                     </div>
                 </div>
-                <div className="xiaomi">
-                    <div className="xiaomiProductsContainer flex flex-wrap">
+                <div className="infinix">
+                    <div className="infinixProductsContainer flex flex-wrap">
                         {
-                            xiaomiProducts.map(item => (
+                            infinixProducts.map(item => (
                                 <div key={item.id} className='product text-center'>
                                     <div className='flex'>
                                         <img className='productImg' src={item.img_1}></img>
@@ -71,4 +69,4 @@ function ShopXiaomiMain() {
     )
 }
 
-export default ShopXiaomiMain
+export default ShopInfinixMain

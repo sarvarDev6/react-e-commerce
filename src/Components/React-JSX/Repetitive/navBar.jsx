@@ -22,7 +22,7 @@ function NavBar() {
                     <div className="topOption flex w-full h-16 justify-between items-center">
                         <h1>SALE OF ELECTRONICS AT <b>THE BEST PRICES</b></h1>
                         <div className="registration flex gap-6">
-                            <h2 className='hover: cursor-pointer'>Telegram Bot</h2>
+                            <a href="https://t.me/openshopuz_bot" target='_blank'><h2 className='hover: cursor-pointer'>Telegram Bot</h2></a>
                             <div className="registerBtn flex gap-2">
                                 <h2 className='hover: cursor-pointer'><i className="fa-regular fa-user"></i> Login</h2> /
                                 <h2 className='hover: cursor-pointer'>Registration</h2>
@@ -79,31 +79,28 @@ function NavBar() {
                                     <div className="dropDownContent w-72 bg-white absolute z-40">
                                         <ol className='leading-8 text-gray-600'>
                                             <div className='liDiv-1'>
-                                                <li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-mobile text-gray-600"></i> Phone</span> <i className="fa-solid fa-chevron-right text-xs"></i></li>
+                                                <Link to="/shop/phones"><li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-mobile text-gray-600"></i> Phone</span> <i className="fa-solid fa-chevron-right text-xs"></i></li></Link>
                                                 <div className="phoneMoreCategory w-72 bg-white p-5 absolute ml-72">
                                                     <h2 className='font-semibold text-xl relative'>Phones</h2>
                                                     <ol>
                                                         <Link to="/shop/xiaomi"><li>Xiaomi</li></Link>
                                                         <Link to="/shop/samsung"><li>Samsung</li></Link>
-                                                        <li>Apple</li>
-                                                        <li>Honor</li>
-                                                        <li>Tecno</li>
-                                                        <li>Infinix</li>
+                                                        <Link to="/shop/apple"><li>Apple</li></Link>
+                                                        <Link to="/shop/honor"><li>Honor</li></Link>
+                                                        <Link to="/shop/tecno"><li>Tecno</li></Link>
+                                                        <Link to="/shop/infinix"><li>Infinix</li></Link>
                                                     </ol>
                                                 </div>
                                             </div>
                                             <hr />
                                             <div className="liDiv-2">
-                                                <li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-tablet text-gray-600"></i> Tablets</span> <i className="fa-solid fa-chevron-right text-xs"></i></li>
+                                                <Link to="/shop/tablets"><li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-tablet text-gray-600"></i> Tablets</span> <i className="fa-solid fa-chevron-right text-xs"></i></li></Link>
                                                 <div className="tabletMoreCategory w-72 bg-white p-5 absolute ml-72">
                                                     <h2 className='font-semibold text-xl relative'>Tablets</h2>
                                                     <ol>
-                                                        <li>Xiaomi</li>
-                                                        <li>Apple</li>
-                                                        <li>Samsung</li>
-                                                        <li>Honor</li>
-                                                        <li>Tecno</li>
-                                                        <li>Infinix</li>
+                                                        <Link to="/shop/xiaomi-tablets"><li>Xiaomi</li></Link>
+                                                        <Link to="/shop/samsung-tablets"><li>Samsung</li></Link>
+                                                        <Link to="/shop/apple-tablets"><li>Apple</li></Link>
                                                     </ol>
                                                 </div>
                                             </div>
