@@ -1,648 +1,688 @@
 .products {
-    .xiaomi {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
-      .xiaomiProductsContainer {
-        gap: 0.6.5rem;
+  .xiaomi {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
+    .xiaomiProductsContainer {
+      gap: 0.6.5rem;
 
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
 
-          .productWarranty {
-            position: absolute;
-            margin-left: 8.5rem;
-            margin-top: 8rem;
-          }
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 65px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
         }
-      }
 
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
-
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
+        }
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
+        }
+        span {
+          transition: 0.2s all ease-in;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 65px;
+        }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
         }
       }
     }
-    .samsung {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
 
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
 
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
-        }
-      }
-
-      .samsungProductsContainer {
-        gap: 0.6.5rem;
-
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
-
-          .productWarranty {
-            position: absolute;
-            margin-left: 8.5rem;
-            margin-top: 8rem;
-          }
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 50px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
-        }
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
       }
     }
-    .apple {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
+  }
+  .samsung {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
 
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
 
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
-        }
-      }
-
-      .appleProductsContainer {
-        gap: 0.6.5rem;
-
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
-
-          .productWarranty {
-            position: absolute;
-            margin-left: 8.5rem;
-            margin-top: 8rem;
-          }
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 50px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
-        }
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
       }
     }
-    .honor {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
 
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
+    .samsungProductsContainer {
+      gap: 0.6.5rem;
 
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
+
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
         }
-      }
 
-      .honorProductsContainer {
-        gap: 0.6.5rem;
-
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
-
-          .productWarranty {
-            position: absolute;
-            margin-left: 8.5rem;
-            margin-top: 8rem;
-          }
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 50px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
         }
-      }
-    }
-    .tecno {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
-
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
-
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
         }
-      }
-
-      .tecnoProductsContainer {
-        gap: 0.6.5rem;
-
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
-
-          .productWarranty {
-            position: absolute;
-            margin-left: 8.5rem;
-            margin-top: 8rem;
-          }
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 50px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
+        span {
+          transition: 0.2s all ease-in;
         }
-      }
-    }
-    .infinix {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
-
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
-
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
         }
-      }
-      .infinixProductsContainer {
-        gap: 0.6.5rem;
-
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
-
-          .productWarranty {
-            position: absolute;
-            margin-left: 8.5rem;
-            margin-top: 8rem;
-          }
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 50px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
         }
-      }
-    }
-    .laptop {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
-
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
-
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 50px;
         }
-      }
-      .laptopProductsContainer {
-        justify-content: space-between;
-
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
-
-          .productWarranty {
-            position: absolute;
-            margin-left: 8.5rem;
-            margin-top: 8rem;
-          }
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 65px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
         }
-      }
-    }
-    .pcEquipment {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
-
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
-
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
-        }
-      }
-      .pcEquipmentProductsContainer {
-        justify-content: space-between;
-
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 65px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
-        }
-      }
-    }
-    .watch {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
-
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
-
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
-        }
-      }
-      .watchProductsContainer {
-        justify-content: space-between;
-
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 50px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
-        }
-      }
-    }
-    .accessuar {
-      margin-bottom: 5rem;
-      text-align: center;
-      height: auto;
-
-      .loadMoreBtn {
-        padding: 15px 300px;
-        color: #ffffff;
-        font-weight: 500;
-        border-radius: 30px;
-        background-color: #ff6117;
-
-        .loadMoreBtnIcon {
-          transform: rotate(90deg);
-        }
-      }
-      .accessuarProductsContainer {
-        gap: 0.6.5rem;
-
-        .product {
-          padding: 5px;
-          width: 13rem;
-          min-height: 400px;
-
-          .productImg {
-            transition: 0.3s all ease-in-out;
-            width: 100%;
-            height: auto;
-          }
-          .productImg:hover {
-            cursor: pointer;
-            transform: scale(106%);
-          }
-          span {
-            transition: 0.2s all ease-in;
-          }
-          span:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          h1 {
-            transition: 0.2s all ease-out;
-            margin-bottom: 0.5rem;
-            height: 65px;
-          }
-          h1:hover {
-            cursor: pointer;
-            color: #ff6117;
-          }
-          button {
-            margin-top: 0.5rem;
-            padding: 6px 35px;
-            border-radius: 30px;
-            border: 2px solid #ff6117;
-            color: #ff6117;
-            font-size: small;
-          }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
         }
       }
     }
   }
+  .apple {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
+      }
+    }
+
+    .appleProductsContainer {
+      gap: 0.6.5rem;
+
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
+
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
+        }
+
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
+        }
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
+        }
+        span {
+          transition: 0.2s all ease-in;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 50px;
+        }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
+        }
+      }
+    }
+  }
+  .honor {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
+      }
+    }
+
+    .honorProductsContainer {
+      gap: 0.6.5rem;
+
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
+
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
+        }
+
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
+        }
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
+        }
+        span {
+          transition: 0.2s all ease-in;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 50px;
+        }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
+        }
+      }
+    }
+  }
+  .tecno {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
+      }
+    }
+
+    .tecnoProductsContainer {
+      gap: 0.6.5rem;
+
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
+
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
+        }
+
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
+        }
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
+        }
+        span {
+          transition: 0.2s all ease-in;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 50px;
+        }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
+        }
+      }
+    }
+  }
+  .infinix {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
+      }
+    }
+    .infinixProductsContainer {
+      gap: 0.6.5rem;
+
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
+
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
+        }
+
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
+        }
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
+        }
+        span {
+          transition: 0.2s all ease-in;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 50px;
+        }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
+        }
+      }
+    }
+  }
+  .laptop {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
+      }
+    }
+    .laptopProductsContainer {
+      justify-content: space-between;
+
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
+
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
+        }
+
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
+        }
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
+        }
+        span {
+          transition: 0.2s all ease-in;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 65px;
+        }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
+        }
+      }
+    }
+  }
+  .pcEquipment {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
+      }
+    }
+    .pcEquipmentProductsContainer {
+      justify-content: space-between;
+
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
+
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
+        }
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
+        }
+        span {
+          transition: 0.2s all ease-in;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 65px;
+        }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
+        }
+      }
+    }
+  }
+  .watch {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
+      }
+    }
+    .watchProductsContainer {
+      justify-content: space-between;
+
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
+
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
+        }
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
+        }
+        span {
+          transition: 0.2s all ease-in;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 50px;
+        }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
+        }
+      }
+    }
+  }
+  .accessuar {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
+      }
+    }
+    .accessuarProductsContainer {
+      gap: 0.6.5rem;
+
+      .product {
+        padding: 5px;
+        width: 13rem;
+        min-height: 400px;
+
+        .productImg {
+          transition: 0.3s all ease-in-out;
+          width: 100%;
+          height: auto;
+        }
+        .productImg:hover {
+          cursor: pointer;
+          transform: scale(106%);
+        }
+        span {
+          transition: 0.2s all ease-in;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
+        h1 {
+          transition: 0.2s all ease-out;
+          margin-bottom: 0.5rem;
+          height: 65px;
+        }
+        h1:hover {
+          cursor: pointer;
+          color: #ff6117;
+        }
+        button {
+          margin-top: 0.5rem;
+          padding: 6px 35px;
+          border-radius: 30px;
+          border: 2px solid #ff6117;
+          color: #ff6117;
+          font-size: small;
+        }
+      }
+    }
+  }
+}

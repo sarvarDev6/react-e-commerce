@@ -1,0 +1,31 @@
+.sliderProducts {
+  .product {
+    img {
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        transform: scale(105%);
+      }
+    }
+
+    span {
+      transition: 0.2s all ease-in;
+      &:hover {
+        color: #ff6117;
+      }
+    }
+
+    h1 {
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        color: #ff6117;
+      }
+    }
+
+    h5 {
+      margin-left: 0.5rem;
+      width: 190px;
+      background-color: yellow;
+      font-size: 14px;
+    }
+  }
+}

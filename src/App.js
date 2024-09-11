@@ -13,12 +13,16 @@ import ShopTablets from "./Components/React-JSX/shopTablets/shopTablets";
 import ShopXiaomiTab from "./Components/React-JSX/shopXiaomiTab/shopXiaomiTab";
 import ShopSamsungTab from "./Components/React-JSX/shopSamsungTab/shopSamsungTab";
 import ShopAppleTab from "./Components/React-JSX/shopAppleTab/shopAppleTab";
+import Registration from "./Components/React-JSX/Registration/registration";
 
 function App() {
   return (
     <>
       <Routes>
+        {/** Home page main route (index) */}
         <Route path="/" element={<Index />} />
+
+        {/** All filter page routes - start  */}
         <Route path="/shop/xiaomi" element={<ShopXiaomi />} />
         <Route path="/shop/samsung" element={<ShopSamsung />} />
         <Route path="/shop/apple" element={<ShopApple />} />
@@ -30,6 +34,10 @@ function App() {
         <Route path="/shop/xiaomi-tablets" element={<ShopXiaomiTab />} />
         <Route path="/shop/samsung-tablets" element={<ShopSamsungTab />} />
         <Route path="/shop/apple-tablets" element={<ShopAppleTab />} />
+        {/** All filter page routes - end  */}
+
+        {/** Routes for user registration  */}
+        <Route path="/user/registration" element={<Registration />}></Route>
       </Routes>
     </>
   );

@@ -25,7 +25,7 @@ function NavBar() {
                             <a href="https://t.me/openshopuz_bot" target='_blank'><h2 className='hover: cursor-pointer'>Telegram Bot</h2></a>
                             <div className="registerBtn flex gap-2">
                                 <h2 className='hover: cursor-pointer'><i className="fa-regular fa-user"></i> Login</h2> /
-                                <h2 className='hover: cursor-pointer'>Registration</h2>
+                                <Link to="/user/registration"><h2 className='hover: cursor-pointer'>Registration</h2></Link>
                             </div>
                         </div>
                     </div>

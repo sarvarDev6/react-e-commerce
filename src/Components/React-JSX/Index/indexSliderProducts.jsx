@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
+// Stylesheet for this react file 
+import "../../Stylesheets/indexSliderProducts.scss"
+
+
 // Library and styles for products carusel
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -45,7 +49,7 @@ function IndexSliderProducts() {
         <div className="sliderProducts w-full mb-10 mt-10">
             <h1 className='mb-10 text-4xl font-semibold text-center'>Best Sellers</h1>
             <Carousel responsive={responsive} className='w-full' infinite={true} ssr={true} arrows={false} autoPlay={true}
-                autoPlaySpeed={3000}>
+                autoPlaySpeed={1800}>
                 {
                     productData.map((item, index) => {
                         return (
@@ -54,6 +58,7 @@ function IndexSliderProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 className='mb-5'>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                             </div>
                         )
                     })

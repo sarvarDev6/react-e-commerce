@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 //Stylesheet for this file
@@ -11,6 +12,7 @@ import warrantyForTenYears from "../../Local-Images/warranty_10year_uz.png";
 function IndexProducts() {
 
     const [productData, setProductData] = useState([]);
+    const navigate = useNavigate();
 
 
 
@@ -41,7 +43,8 @@ function IndexProducts() {
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Xiaomi</h1>
                 <div className="xiaomiProductsContainer flex flex-wrap">
                     {
-                        xiaomiProducts.map(item => (
+                        xiaomiProducts.map(item =>
+                        (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
                                     <img className='productImg' src={item.img_1}></img>
@@ -50,6 +53,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
@@ -70,6 +74,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
@@ -90,6 +95,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
@@ -110,6 +116,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
@@ -130,6 +137,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
@@ -150,6 +158,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
@@ -170,6 +179,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
@@ -189,6 +199,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
@@ -208,6 +219,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
@@ -227,6 +239,7 @@ function IndexProducts() {
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
                                 <h1 >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
