@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 //Stylesheet for this file
@@ -14,6 +15,10 @@ function IndexProducts() {
     const [productData, setProductData] = useState([]);
     const navigate = useNavigate();
 
+    const handleProductClick = (item) => {
+        navigate("/shop/product", { state: { item } });
+    }
+
 
 
     // Main Product Data's API URL
@@ -21,8 +26,6 @@ function IndexProducts() {
         axios.get('http://127.0.0.1:8000/api/product')
             .then(res => setProductData(res.data))
     }, []);
-
-    console.log(productData);
 
 
     // All Brand Products filtering here 
@@ -47,11 +50,11 @@ function IndexProducts() {
                         (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                     <img className='productWarranty w-14' src={warrantyForTenYears}></img>
                                 </div>
-                                <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <Link to="/shop/phones"><span className='text-gray-500 font-bold'>{item.category}</span></Link>
+                                <h1 onClick={() => handleProductClick(item)} >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -59,7 +62,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={xiaomiProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
             <div className="samsung">
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Samsung</h1>
@@ -68,11 +70,11 @@ function IndexProducts() {
                         samsungProducts.map(item => (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                     <img className='productWarranty w-14' src={warrantyForTenYears}></img>
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -80,7 +82,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={samsungProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
             <div className="apple">
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Apple</h1>
@@ -89,11 +90,11 @@ function IndexProducts() {
                         appleProducts.map(item => (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                     <img className='productWarranty w-14' src={warrantyForTenYears}></img>
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -101,7 +102,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={appleProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
             <div className="honor">
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Honor</h1>
@@ -110,11 +110,11 @@ function IndexProducts() {
                         honorProducts.map(item => (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                     <img className='productWarranty w-14' src={warrantyForTenYears}></img>
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -122,7 +122,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={honorProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
             <div className="tecno">
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Tecno</h1>
@@ -131,11 +130,11 @@ function IndexProducts() {
                         tecnoProducts.map(item => (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                     <img className='productWarranty w-14' src={warrantyForTenYears}></img>
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -143,7 +142,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={tecnoProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
             <div className="infinix">
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Infinix</h1>
@@ -152,11 +150,11 @@ function IndexProducts() {
                         infinixProducts.map(item => (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                     <img className='productWarranty w-14' src={warrantyForTenYears}></img>
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -164,7 +162,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={infinixProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
             <div className="laptop">
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Laptops</h1>
@@ -173,11 +170,11 @@ function IndexProducts() {
                         laptopProducts.map(item => (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                     <img className='productWarranty w-14' src={warrantyForTenYears}></img>
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -185,7 +182,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={laptopProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
             <div className="pcEquipment">
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>PC Equipment</h1>
@@ -194,10 +190,10 @@ function IndexProducts() {
                         pcEquipmentProducts.map(item => (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -205,7 +201,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={pcEquipmentProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
             <div className="watch">
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Watches</h1>
@@ -214,10 +209,10 @@ function IndexProducts() {
                         watchProducts.map(item => (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -225,7 +220,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={watchProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
             <div className="accessuar">
                 <h1 className='text-center text-3xl font-semibold mt-5 mb-10'>Accessuars and Gadgets</h1>
@@ -234,10 +228,10 @@ function IndexProducts() {
                         accessuarProducts.map(item => (
                             <div key={item.id} className='product text-center'>
                                 <div className='flex'>
-                                    <img className='productImg' src={item.img_1}></img>
+                                    <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                 </div>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 >{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                 <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
@@ -245,7 +239,6 @@ function IndexProducts() {
                         ))
                     }
                 </div>
-                <button className={accessuarProducts.length < 12 ? `hidden` : `loadMoreBtn`}><i className="fa-solid fa-angles-right loadMoreBtnIcon"></i> LOAD MORE</button>
             </div>
         </div>
     )

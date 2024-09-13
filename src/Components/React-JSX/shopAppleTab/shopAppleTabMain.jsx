@@ -2,10 +2,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import MainContainer from '../Repetitive/mainContainer';
+import { useNavigate } from 'react-router-dom';
 
 
 // Stylesheet for this file
-import "../../Stylesheets/shopXiaomiTab/shopXiaomiTabMain.scss";
+import "../../Stylesheets/shopAppleTab/shopAppleTabMain.scss";
 
 
 // Locally called images
@@ -18,7 +19,14 @@ import AboutCompanyInfo from '../Repetitive/aboutCompanyInfo';
 
 function ShopAppleTabMain() {
 
+    const navigate = useNavigate();
+
+    const handleProductClick = (item) => {
+        navigate("/shop/product", { state: { item } });
+    }
+
     const [productData, setProductData] = useState([]);
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
         axios.get("http://127.0.0.1:8000/api/product")
@@ -41,22 +49,25 @@ function ShopAppleTabMain() {
                         </select>
                     </div>
                     <div className="search flex items-center">
-                        <input type="text" placeholder='Search' />
+                        <input type="text" placeholder='Search' onChange={(e) => setSearch(e.target.value)} />
                         <CiSearch />
                     </div>
                 </div>
                 <div className="appleTab">
                     <div className="appleTabProductsContainer flex flex-wrap">
                         {
-                            appleTabProducts.map(item => (
+                            appleTabProducts.filter((item) => {
+                                return search.toLowerCase() === '' ? item : item.name.toLowerCase().includes(search)
+                            }).map(item => (
                                 <div key={item.id} className='product text-center'>
                                     <div className='flex'>
-                                        <img className='productImg' src={item.img_1}></img>
+                                        <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
                                         <img className='productWarranty w-14' src={warrantyForTenYears}></img>
                                     </div>
                                     <span className='text-gray-500 font-bold'>{item.category}</span>
-                                    <h1 >{item.name}</h1>
+                                    <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                     <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                    <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                     <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                                 </div>
                             ))

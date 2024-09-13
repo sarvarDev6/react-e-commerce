@@ -4,8 +4,9 @@ import axios from 'axios'
 import MainContainer from '../Repetitive/mainContainer';
 import { useNavigate } from 'react-router-dom';
 
+
 // Stylesheet for this file
-import "../../Stylesheets/shopApple/shopAppleMain.scss";
+import "../../Stylesheets/shopAppleLap/shopAppleLapMain.scss";
 
 
 // Locally called images
@@ -16,7 +17,7 @@ import warrantyForTenYears from "../../Local-Images/warranty_10year_uz.png"
 import { CiSearch } from "react-icons/ci";
 import AboutCompanyInfo from '../Repetitive/aboutCompanyInfo';
 
-function ShopAppleMain() {
+function ShopAppleLapMain() {
 
     const navigate = useNavigate();
 
@@ -25,15 +26,14 @@ function ShopAppleMain() {
     }
 
     const [productData, setProductData] = useState([]);
-    const [search, setSearch] = useState("");
 
     useEffect(() => {
         axios.get("http://127.0.0.1:8000/api/product")
             .then(res => setProductData(res.data))
     }, [])
 
-    // productData filtering here (samsung)
-    let appleProducts = productData.filter((item) => item.brand_name == "Apple" && item.category == "phone");
+    // productData filtering here (xiaomiTab)
+    let appleLapProducts = productData.filter((item) => item.brand_name == "Apple" && item.category == "laptop");
 
     return (
         <main>
@@ -48,16 +48,14 @@ function ShopAppleMain() {
                         </select>
                     </div>
                     <div className="search flex items-center">
-                        <input type="text" placeholder='Search' onChange={(e) => setSearch(e.target.value)} />
+                        <input type="text" placeholder='Search' />
                         <CiSearch />
                     </div>
                 </div>
-                <div className="apple">
-                    <div className="appleProductsContainer flex flex-wrap">
+                <div className="appleLap">
+                    <div className="appleLapProductsContainer flex flex-wrap">
                         {
-                            appleProducts.filter((item) => {
-                                return search.toLowerCase() === '' ? item : item.name.toLowerCase().includes(search)
-                            }).map(item => (
+                            appleLapProducts.map(item => (
                                 <div key={item.id} className='product text-center'>
                                     <div className='flex'>
                                         <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
@@ -79,4 +77,4 @@ function ShopAppleMain() {
     )
 }
 
-export default ShopAppleMain
+export default ShopAppleLapMain

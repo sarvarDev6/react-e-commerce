@@ -24,18 +24,18 @@ function AboutCompanyInfo() {
                 <div className="flex gap-2">
                     <ul className='flex gap-1'>
                         <Link to="/shop/phones"><li className='hover: cursor-pointer'><b>Phones:</b></li></Link>
-                        <li className='hover: cursor-pointer'><Link to="/shop/xiaomi"><span>Xiaomi</span></Link>,</li>
-                        <li className='hover: cursor-pointer'><Link to="/shop/samsung"><span>Samsung</span></Link>,</li>
-                        <li className='hover: cursor-pointer'><Link to="/shop/apple"><span>Apple</span></Link>,</li>
-                        <li className='hover: cursor-pointer'><Link to="/shop/honor"><span>Honor</span></Link>,</li>
-                        <li className='hover: cursor-pointer'><Link to="/shop/tecno"><span>Tecno</span></Link>,</li>
-                        <li className='hover: cursor-pointer'><Link to="/shop/infinix"><span>Infinix</span></Link></li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/phones/xiaomi"><span>Xiaomi</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/phones/samsung"><span>Samsung</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/phones/apple"><span>Apple</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/phones/honor"><span>Honor</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/phones/tecno"><span>Tecno</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/phones/infinix"><span>Infinix</span></Link></li>
                     </ul>
                     <ul className='flex gap-1'>
                         <Link to="/shop/tablets"><li className='hover: cursor-pointer'><b>Tablets:</b></li></Link>
-                        <li className='hover: cursor-pointer'><Link to="/shop/xiaomi-tablets"><span>Xiaomi</span></Link>,</li>
-                        <li className='hover: cursor-pointer'><Link to="/shop/samsung-tablets"><span>Samsung</span></Link>,</li>
-                        <li className='hover: cursor-pointer'><Link to="/shop/apple-tablets"><span>Apple</span></Link></li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/tablets/xiaomi"><span>Xiaomi</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/tablets/samsung"><span>Samsung</span></Link>,</li>
+                        <li className='hover: cursor-pointer'><Link to="/shop/tablets/apple"><span>Apple</span></Link></li>
                     </ul>
                 </div>
             </div>
@@ -43,9 +43,8 @@ function AboutCompanyInfo() {
                 <h1 className='text-xl font-bold text-gray-700 mb-7'>Computer Equipments</h1>
                 <div className="flex gap-2">
                     <ul className='flex gap-1'>
-                        <li className='hover: cursor-pointer'><b>Laptop:</b></li>
-                        <li className='hover: cursor-pointer'><span>MacBook</span>,</li>
-                        <li className='hover: cursor-pointer'><span>AsusRog</span>,</li>
+                        <Link to="/shop/laptops"><li className='hover: cursor-pointer'><b>Laptops:</b></li></Link>
+                        <Link to="/shop/laptops/mac-book"><li className='hover: cursor-pointer'><span>MacBook</span>,</li></Link>
                         <li className='hover: cursor-pointer'><span>Hp</span>,</li>
                         <li className='hover: cursor-pointer'><span>Acer</span>,</li>
                         <li className='hover: cursor-pointer'><span>MSI</span>,</li>

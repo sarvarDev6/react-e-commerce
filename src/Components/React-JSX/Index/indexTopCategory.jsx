@@ -15,22 +15,22 @@ function IndexTopCategory() {
     return (
         <div className="topCategories flex mb-20 mt-10">
             <div className="xiaomi w-full p-1">
-                <Link to="/shop/xiaomi"><img className='rounded-xl hover: cursor-pointer' src={xiaomi}></img></Link>
+                <Link to="/shop/phones/xiaomi"><img className='rounded-xl hover: cursor-pointer' src={xiaomi}></img></Link>
             </div>
             <div className="samsung w-full p-1">
-                <Link to="/shop/samsung"><img className='rounded-xl hover: cursor-pointer' src={samsung}></img></Link>
+                <Link to="/shop/phones/samsung"><img className='rounded-xl hover: cursor-pointer' src={samsung}></img></Link>
             </div>
             <div className="apple w-full p-1">
-                <Link to="/shop/apple"><img className='rounded-xl hover: cursor-pointer' src={apple}></img></Link>
+                <Link to="/shop/phones/apple"><img className='rounded-xl hover: cursor-pointer' src={apple}></img></Link>
             </div>
             <div className="honor w-full p-1">
-                <Link to="/shop/honor"><img className='rounded-xl hover: cursor-pointer' src={honor}></img></Link>
+                <Link to="/shop/phones/honor"><img className='rounded-xl hover: cursor-pointer' src={honor}></img></Link>
             </div>
             <div className="tecno w-full p-1">
-                <Link to="/shop/tecno"><img className='rounded-xl hover: cursor-pointer' src={tecno}></img></Link>
+                <Link to="/shop/phones/tecno"><img className='rounded-xl hover: cursor-pointer' src={tecno}></img></Link>
             </div>
             <div className="infinix w-full p-1">
-                <Link to="/shop/infinix"><img className='rounded-xl hover: cursor-pointer' src={infinix}></img></Link>
+                <Link to="/shop/phones/infinix"><img className='rounded-xl hover: cursor-pointer' src={infinix}></img></Link>
             </div>
         </div>
     )

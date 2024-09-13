@@ -14,7 +14,11 @@ import MainContainer from './mainContainer';
 import openShopLogo from "../../Local-Images/open-shop-logo.png";
 
 
-function NavBar() {
+function NavBar({ userData }) {
+
+    console.log(userData);
+
+
     return (
         <>
             <div className='bg-slate-100'>
@@ -24,7 +28,7 @@ function NavBar() {
                         <div className="registration flex gap-6">
                             <a href="https://t.me/openshopuz_bot" target='_blank'><h2 className='hover: cursor-pointer'>Telegram Bot</h2></a>
                             <div className="registerBtn flex gap-2">
-                                <h2 className='hover: cursor-pointer'><i className="fa-regular fa-user"></i> Login</h2> /
+                                <Link to="/user/login"><h2 className='hover: cursor-pointer'><i className="fa-regular fa-user"></i> Login</h2></Link> /
                                 <Link to="/user/registration"><h2 className='hover: cursor-pointer'>Registration</h2></Link>
                             </div>
                         </div>
@@ -33,7 +37,7 @@ function NavBar() {
             </div>
             <MainContainer>
                 <div className="secondOption h-32 flex items-center justify-between">
-                    <img src={openShopLogo} className='w-64 h-14 hover: cursor-pointer' alt="OPENSHOP.ENG" />
+                    <Link to="/"><img src={openShopLogo} className='w-64 h-14 hover: cursor-pointer' alt="OPENSHOP.ENG" /></Link>
                     <div className="contact flex items-center gap-7">
                         <div className="callUs flex gap-3 items-center">
                             <i className="fas fa-regular fa-phone text-3xl text-gray-700 hover: cursor-pointer"></i>
@@ -83,12 +87,12 @@ function NavBar() {
                                                 <div className="phoneMoreCategory w-72 bg-white p-5 absolute ml-72">
                                                     <h2 className='font-semibold text-xl relative'>Phones</h2>
                                                     <ol>
-                                                        <Link to="/shop/xiaomi"><li>Xiaomi</li></Link>
-                                                        <Link to="/shop/samsung"><li>Samsung</li></Link>
-                                                        <Link to="/shop/apple"><li>Apple</li></Link>
-                                                        <Link to="/shop/honor"><li>Honor</li></Link>
-                                                        <Link to="/shop/tecno"><li>Tecno</li></Link>
-                                                        <Link to="/shop/infinix"><li>Infinix</li></Link>
+                                                        <Link to="/shop/phones/xiaomi"><li>Xiaomi</li></Link>
+                                                        <Link to="/shop/phones/samsung"><li>Samsung</li></Link>
+                                                        <Link to="/shop/phones/apple"><li>Apple</li></Link>
+                                                        <Link to="/shop/phones/honor"><li>Honor</li></Link>
+                                                        <Link to="/shop/phones/tecno"><li>Tecno</li></Link>
+                                                        <Link to="/shop/phones/infinix"><li>Infinix</li></Link>
                                                     </ol>
                                                 </div>
                                             </div>
@@ -98,24 +102,23 @@ function NavBar() {
                                                 <div className="tabletMoreCategory w-72 bg-white p-5 absolute ml-72">
                                                     <h2 className='font-semibold text-xl relative'>Tablets</h2>
                                                     <ol>
-                                                        <Link to="/shop/xiaomi-tablets"><li>Xiaomi</li></Link>
-                                                        <Link to="/shop/samsung-tablets"><li>Samsung</li></Link>
-                                                        <Link to="/shop/apple-tablets"><li>Apple</li></Link>
+                                                        <Link to="/shop/tablets/xiaomi"><li>Xiaomi</li></Link>
+                                                        <Link to="/shop/tablets/samsung"><li>Samsung</li></Link>
+                                                        <Link to="/shop/tablets/apple"><li>Apple</li></Link>
                                                     </ol>
                                                 </div>
                                             </div>
                                             <hr />
                                             <div className="liDiv-3">
-                                                <li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-laptop text-gray-600"></i> Laptops</span> <i className="fa-solid fa-chevron-right text-xs"></i></li>
+                                                <Link to="/shop/laptops"><li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-laptop text-gray-600"></i> Laptops</span> <i className="fa-solid fa-chevron-right text-xs"></i></li></Link>
                                                 <div className="laptopMoreCategory w-72 bg-white p-5 absolute ml-72">
                                                     <h2 className='font-semibold text-xl relative'>Laptops</h2>
                                                     <ol>
-                                                        <li>Xiaomi</li>
-                                                        <li>Apple</li>
-                                                        <li>Samsung</li>
-                                                        <li>Honor</li>
-                                                        <li>Tecno</li>
-                                                        <li>Infinix</li>
+                                                        <Link to="/shop/laptops/mac-book"><li>MacBook</li></Link>
+                                                        <li>MSI</li>
+                                                        <li>HP</li>
+                                                        <li>Acer</li>
+                                                        <li>Lenovo</li>
                                                     </ol>
                                                 </div>
                                             </div>
@@ -175,7 +178,7 @@ function NavBar() {
                                 <li className='hover: cursor-pointer'>Our locations</li>
                             </ul>
                         </div>
-                        <h1 className='phonesCate text-2xl font-semibold hover: cursor-pointer'><i className="fa-solid fa-mobile text-2xl"></i> Phones</h1>
+                        <Link to="/shop/phones"><h1 className='phonesCate text-2xl font-semibold hover: cursor-pointer'><i className="fa-solid fa-mobile text-2xl"></i> Phones</h1></Link>
                     </div>
                 </MainContainer>
             </nav>

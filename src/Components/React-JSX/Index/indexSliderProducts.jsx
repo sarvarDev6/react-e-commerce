@@ -1,5 +1,6 @@
 // Called react libraries
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -16,6 +17,12 @@ function IndexSliderProducts() {
     // useState data's goes here
     const [productData, setProductData] = useState([]);
 
+
+    const navigate = useNavigate();
+
+    const handleProductClick = (item) => {
+        navigate("/shop/product", { state: { item } });
+    }
 
 
     // Main Product Data's API URL
@@ -37,7 +44,7 @@ function IndexSliderProducts() {
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 2
+            items: 3
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
@@ -54,9 +61,9 @@ function IndexSliderProducts() {
                     productData.map((item, index) => {
                         return (
                             <div key={index} className='product text-center hover: cursor-pointer'>
-                                <img src={item.img_1}></img>
+                                <img onClick={() => handleProductClick(item)} src={item.img_1}></img>
                                 <span className='text-gray-500 font-bold'>{item.category}</span>
-                                <h1 className='mb-5'>{item.name}</h1>
+                                <h1 onClick={() => handleProductClick(item)} className='mb-5'>{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                             </div>

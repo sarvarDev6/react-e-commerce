@@ -4,8 +4,9 @@ import axios from 'axios'
 import MainContainer from '../Repetitive/mainContainer';
 import { useNavigate } from 'react-router-dom';
 
+
 // Stylesheet for this file
-import "../../Stylesheets/shopApple/shopAppleMain.scss";
+import "../../Stylesheets/shopSamsung/shopSamsungMain.scss";
 
 
 // Locally called images
@@ -16,7 +17,7 @@ import warrantyForTenYears from "../../Local-Images/warranty_10year_uz.png"
 import { CiSearch } from "react-icons/ci";
 import AboutCompanyInfo from '../Repetitive/aboutCompanyInfo';
 
-function ShopAppleMain() {
+function ShopLaptopsMain() {
 
     const navigate = useNavigate();
 
@@ -32,8 +33,8 @@ function ShopAppleMain() {
             .then(res => setProductData(res.data))
     }, [])
 
-    // productData filtering here (samsung)
-    let appleProducts = productData.filter((item) => item.brand_name == "Apple" && item.category == "phone");
+    // productData filtering here (laptop)
+    let laptopProducts = productData.filter((item) => item.category == "laptop");
 
     return (
         <main>
@@ -52,10 +53,10 @@ function ShopAppleMain() {
                         <CiSearch />
                     </div>
                 </div>
-                <div className="apple">
-                    <div className="appleProductsContainer flex flex-wrap">
+                <div className="samsung">
+                    <div className="samsungProductsContainer flex flex-wrap">
                         {
-                            appleProducts.filter((item) => {
+                            laptopProducts.filter((item) => {
                                 return search.toLowerCase() === '' ? item : item.name.toLowerCase().includes(search)
                             }).map(item => (
                                 <div key={item.id} className='product text-center'>
@@ -66,7 +67,6 @@ function ShopAppleMain() {
                                     <span className='text-gray-500 font-bold'>{item.category}</span>
                                     <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                     <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
-                                    <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
                                     <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                                 </div>
                             ))
@@ -79,4 +79,4 @@ function ShopAppleMain() {
     )
 }
 
-export default ShopAppleMain
+export default ShopLaptopsMain
