@@ -1,6 +1,7 @@
 // Called React Libraries
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 // Stylesheet for this file
 import "../../Stylesheets/navBar.scss"
@@ -14,9 +15,17 @@ import MainContainer from './mainContainer';
 import openShopLogo from "../../Local-Images/open-shop-logo.png";
 
 
-function NavBar({ userData }) {
+function NavBar() {
 
-    console.log(userData);
+
+    const [cartData, setCartData] = useState([]);
+
+    // Main Product Data's API URL
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/api/cart')
+            .then(res => setCartData(res.data))
+    }, []);
+
 
 
     return (
@@ -57,15 +66,17 @@ function NavBar({ userData }) {
                                     <h1>Wishlist</h1>
                                 </div>
                             </div>
-                            <div className="cart flex">
-                                <div>
-                                    <div className="flex">
-                                        <i className="fa-solid fa-bag-shopping text-3xl text-gray-700"></i>
-                                        <span className='absolute ml-4'>0</span>
+                            <Link to="/user/cart">
+                                <div className="cart flex">
+                                    <div>
+                                        <div className="flex">
+                                            <i className="fa-solid fa-bag-shopping text-3xl text-gray-700"></i>
+                                            <span className='absolute ml-4'>{cartData.length}</span>
+                                        </div>
+                                        <h1>Cart</h1>
                                     </div>
-                                    <h1>Cart</h1>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -173,9 +184,9 @@ function NavBar({ userData }) {
                             </div>
                             <ul className='flex gap-7'>
                                 <Link to="/"><li className={window.location.pathname == '/' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Home</li></Link>
-                                <li className='hover: cursor-pointer'>Site Map</li>
-                                <li className='hover: cursor-pointer'>Installment</li>
-                                <li className='hover: cursor-pointer'>Our locations</li>
+                                <Link to="/shop/categories"><li className={window.location.pathname == '/shop/categories' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Site Map</li></Link>
+                                <Link to="/shop/installment"><li className={window.location.pathname == '/shop/installment' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Installment</li></Link>
+                                <Link to="/our/locations"><li className={window.location.pathname == '/our/locations' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Our Locations</li></Link>
                             </ul>
                         </div>
                         <Link to="/shop/phones"><h1 className='phonesCate text-2xl font-semibold hover: cursor-pointer'><i className="fa-solid fa-mobile text-2xl"></i> Phones</h1></Link>

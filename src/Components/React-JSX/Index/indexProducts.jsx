@@ -19,6 +19,35 @@ function IndexProducts() {
         navigate("/shop/product", { state: { item } });
     }
 
+    const handleAddToCart = (item) => {
+        const cartItem = {
+            img_1: item.img_1,
+            img_2: item.img_2,
+            img_3: item.img_3,
+            brand_name: item.brand_name,
+            brand_logo: item.brand_logo,
+            name: item.name,
+            price: item.price,
+            category: item.category,
+            discount: item.discount
+        };
+
+        console.log(item)
+
+        axios
+            .post("http://127.0.0.1:8000/api/cart/add", JSON.stringify(cartItem), {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((res) => {
+                console.log("Product added to cart successfully", res.data);
+            })
+            .catch((error) => {
+                console.error("Error adding product to cart", error);
+            });
+    }
+
 
 
     // Main Product Data's API URL
@@ -57,7 +86,10 @@ function IndexProducts() {
                                 <h1 onClick={() => handleProductClick(item)} >{item.name}</h1>
                                 <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
                                 <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
-                                <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
+                                <button className='text-xs' onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleAddToCart(item)
+                                }}><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                             </div>
                         ))
                     }

@@ -1,0 +1,18 @@
+header {
+  .categoryBox {
+    justify-content: space-between;
+    .item {
+      cursor: pointer;
+      border-radius: 8px;
+      text-align: center;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      border: 3px solid #ff6117;
+      i {
+        color: #ff6117;
+      }
+    }
+  }
+}

@@ -73,19 +73,6 @@
     margin-bottom: 5rem;
     text-align: center;
     height: auto;
-
-    .loadMoreBtn {
-      padding: 15px 300px;
-      color: #ffffff;
-      font-weight: 500;
-      border-radius: 30px;
-      background-color: #ff6117;
-
-      .loadMoreBtnIcon {
-        transform: rotate(90deg);
-      }
-    }
-
     .samsungProductsContainer {
       gap: 0.6.5rem;
 
@@ -116,18 +103,18 @@
           cursor: pointer;
           color: #ff6117;
         }
-        h5 {
-          background-color: yellow;
-          font-size: 14px;
-        }
         h1 {
           transition: 0.2s all ease-out;
           margin-bottom: 0.5rem;
-          height: 50px;
+          height: 65px;
         }
         h1:hover {
           cursor: pointer;
           color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
         }
         button {
           margin-top: 0.5rem;
@@ -139,11 +126,6 @@
         }
       }
     }
-  }
-  .apple {
-    margin-bottom: 5rem;
-    text-align: center;
-    height: auto;
 
     .loadMoreBtn {
       padding: 15px 300px;
@@ -156,7 +138,11 @@
         transform: rotate(90deg);
       }
     }
-
+  }
+  .apple {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
     .appleProductsContainer {
       gap: 0.6.5rem;
 
@@ -187,18 +173,18 @@
           cursor: pointer;
           color: #ff6117;
         }
-        h5 {
-          background-color: yellow;
-          font-size: 14px;
-        }
         h1 {
           transition: 0.2s all ease-out;
           margin-bottom: 0.5rem;
-          height: 50px;
+          height: 65px;
         }
         h1:hover {
           cursor: pointer;
           color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
         }
         button {
           margin-top: 0.5rem;
@@ -210,11 +196,6 @@
         }
       }
     }
-  }
-  .honor {
-    margin-bottom: 5rem;
-    text-align: center;
-    height: auto;
 
     .loadMoreBtn {
       padding: 15px 300px;
@@ -227,7 +208,11 @@
         transform: rotate(90deg);
       }
     }
-
+  }
+  .honor {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
     .honorProductsContainer {
       gap: 0.6.5rem;
 
@@ -258,18 +243,18 @@
           cursor: pointer;
           color: #ff6117;
         }
-        h5 {
-          background-color: yellow;
-          font-size: 14px;
-        }
         h1 {
           transition: 0.2s all ease-out;
           margin-bottom: 0.5rem;
-          height: 50px;
+          height: 65px;
         }
         h1:hover {
           cursor: pointer;
           color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
         }
         button {
           margin-top: 0.5rem;
@@ -281,11 +266,6 @@
         }
       }
     }
-  }
-  .tecno {
-    margin-bottom: 5rem;
-    text-align: center;
-    height: auto;
 
     .loadMoreBtn {
       padding: 15px 300px;
@@ -298,7 +278,11 @@
         transform: rotate(90deg);
       }
     }
-
+  }
+  .tecno {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
     .tecnoProductsContainer {
       gap: 0.6.5rem;
 
@@ -329,18 +313,18 @@
           cursor: pointer;
           color: #ff6117;
         }
-        h5 {
-          background-color: yellow;
-          font-size: 14px;
-        }
         h1 {
           transition: 0.2s all ease-out;
           margin-bottom: 0.5rem;
-          height: 50px;
+          height: 65px;
         }
         h1:hover {
           cursor: pointer;
           color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
         }
         button {
           margin-top: 0.5rem;
@@ -352,11 +336,6 @@
         }
       }
     }
-  }
-  .infinix {
-    margin-bottom: 5rem;
-    text-align: center;
-    height: auto;
 
     .loadMoreBtn {
       padding: 15px 300px;
@@ -369,6 +348,11 @@
         transform: rotate(90deg);
       }
     }
+  }
+  .infinix {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
     .infinixProductsContainer {
       gap: 0.6.5rem;
 
@@ -399,18 +383,18 @@
           cursor: pointer;
           color: #ff6117;
         }
-        h5 {
-          background-color: yellow;
-          font-size: 14px;
-        }
         h1 {
           transition: 0.2s all ease-out;
           margin-bottom: 0.5rem;
-          height: 50px;
+          height: 65px;
         }
         h1:hover {
           cursor: pointer;
           color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
         }
         button {
           margin-top: 0.5rem;
@@ -422,11 +406,6 @@
         }
       }
     }
-  }
-  .laptop {
-    margin-bottom: 5rem;
-    text-align: center;
-    height: auto;
 
     .loadMoreBtn {
       padding: 15px 300px;
@@ -439,8 +418,13 @@
         transform: rotate(90deg);
       }
     }
+  }
+  .laptop {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
     .laptopProductsContainer {
-      justify-content: space-between;
+      gap: 0.6.5rem;
 
       .product {
         padding: 5px;
@@ -469,10 +453,6 @@
           cursor: pointer;
           color: #ff6117;
         }
-        h5 {
-          background-color: yellow;
-          font-size: 14px;
-        }
         h1 {
           transition: 0.2s all ease-out;
           margin-bottom: 0.5rem;
@@ -482,6 +462,10 @@
           cursor: pointer;
           color: #ff6117;
         }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
         button {
           margin-top: 0.5rem;
           padding: 6px 35px;
@@ -490,6 +474,18 @@
           color: #ff6117;
           font-size: small;
         }
+      }
+    }
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
       }
     }
   }
@@ -497,25 +493,19 @@
     margin-bottom: 5rem;
     text-align: center;
     height: auto;
-
-    .loadMoreBtn {
-      padding: 15px 300px;
-      color: #ffffff;
-      font-weight: 500;
-      border-radius: 30px;
-      background-color: #ff6117;
-
-      .loadMoreBtnIcon {
-        transform: rotate(90deg);
-      }
-    }
     .pcEquipmentProductsContainer {
-      justify-content: space-between;
+      gap: 0.6.5rem;
 
       .product {
         padding: 5px;
         width: 13rem;
         min-height: 400px;
+
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
+        }
 
         .productImg {
           transition: 0.3s all ease-in-out;
@@ -532,10 +522,6 @@
         span:hover {
           cursor: pointer;
           color: #ff6117;
-        }
-        h5 {
-          background-color: yellow;
-          font-size: 14px;
         }
         h1 {
           transition: 0.2s all ease-out;
@@ -546,6 +532,10 @@
           cursor: pointer;
           color: #ff6117;
         }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
         button {
           margin-top: 0.5rem;
           padding: 6px 35px;
@@ -556,11 +546,6 @@
         }
       }
     }
-  }
-  .watch {
-    margin-bottom: 5rem;
-    text-align: center;
-    height: auto;
 
     .loadMoreBtn {
       padding: 15px 300px;
@@ -573,13 +558,24 @@
         transform: rotate(90deg);
       }
     }
+  }
+  .watch {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
     .watchProductsContainer {
-      justify-content: space-between;
+      gap: 0.6.5rem;
 
       .product {
         padding: 5px;
         width: 13rem;
         min-height: 400px;
+
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
+        }
 
         .productImg {
           transition: 0.3s all ease-in-out;
@@ -597,18 +593,18 @@
           cursor: pointer;
           color: #ff6117;
         }
-        h5 {
-          background-color: yellow;
-          font-size: 14px;
-        }
         h1 {
           transition: 0.2s all ease-out;
           margin-bottom: 0.5rem;
-          height: 50px;
+          height: 65px;
         }
         h1:hover {
           cursor: pointer;
           color: #ff6117;
+        }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
         }
         button {
           margin-top: 0.5rem;
@@ -620,11 +616,6 @@
         }
       }
     }
-  }
-  .accessuar {
-    margin-bottom: 5rem;
-    text-align: center;
-    height: auto;
 
     .loadMoreBtn {
       padding: 15px 300px;
@@ -637,6 +628,11 @@
         transform: rotate(90deg);
       }
     }
+  }
+  .accessuar {
+    margin-bottom: 5rem;
+    text-align: center;
+    height: auto;
     .accessuarProductsContainer {
       gap: 0.6.5rem;
 
@@ -645,6 +641,12 @@
         width: 13rem;
         min-height: 400px;
 
+        .productWarranty {
+          position: absolute;
+          margin-left: 8.5rem;
+          margin-top: 8rem;
+        }
+
         .productImg {
           transition: 0.3s all ease-in-out;
           width: 100%;
@@ -661,10 +663,6 @@
           cursor: pointer;
           color: #ff6117;
         }
-        h5 {
-          background-color: yellow;
-          font-size: 14px;
-        }
         h1 {
           transition: 0.2s all ease-out;
           margin-bottom: 0.5rem;
@@ -674,6 +672,10 @@
           cursor: pointer;
           color: #ff6117;
         }
+        h5 {
+          background-color: yellow;
+          font-size: 14px;
+        }
         button {
           margin-top: 0.5rem;
           padding: 6px 35px;
@@ -682,6 +684,18 @@
           color: #ff6117;
           font-size: small;
         }
+      }
+    }
+
+    .loadMoreBtn {
+      padding: 15px 300px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 30px;
+      background-color: #ff6117;
+
+      .loadMoreBtnIcon {
+        transform: rotate(90deg);
       }
     }
   }

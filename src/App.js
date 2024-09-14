@@ -21,6 +21,11 @@ import ShopLaptops from "./Components/React-JSX/shopLaptops/shopLaptops";
 import ShopAppleLap from "./Components/React-JSX/shopAppleLap/shopAppleLap";
 import ToDetail from "./Components/React-JSX/toDetail/toDetail";
 import NotFoundPage from "./Components/React-JSX/notFoundPage";
+import AllCategory from "./Components/React-JSX/allCategory/allCategory";
+import InstallMent from "./Components/React-JSX/Installment/installMent";
+import OurLocations from "./Components/React-JSX/ourLocations/ourLocations";
+import Cart from "./Components/React-JSX/Cart/cart";
+import Checkout from "./Components/React-JSX/Checkout/checkout";
 
 function App() {
   return (
@@ -49,7 +54,13 @@ function App() {
         <Route path="/shop/laptops/mac-book" element={<ShopAppleLap />}></Route>
         {/** All filter page routes - end  */}
 
+        {/** Main Pages  */}
         <Route path="/notFound" element={<NotFoundPage />}></Route>
+        <Route path="/shop/categories" element={<AllCategory />}></Route>
+        <Route path="/shop/installment" element={<InstallMent />}></Route>
+        <Route path="/our/locations" element={<OurLocations />}></Route>
+        <Route path="/user/cart" element={<Cart />}></Route>
+        <Route path="/user/cart/checkout" element={<Checkout />}></Route>
 
         {/** Routes for user registration  */}
         <Route path="/user/registration" element={<Registration />}></Route>

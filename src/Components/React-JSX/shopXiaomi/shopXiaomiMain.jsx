@@ -12,10 +12,10 @@ import "../../Stylesheets/shopXiaomiMain.scss";
 // Locally called images
 import warrantyForTenYears from "../../Local-Images/warranty_10year_uz.png"
 
+import AboutCompanyInfo from '../Repetitive/aboutCompanyInfo';
 
 // React icons
 import { CiSearch } from "react-icons/ci";
-import AboutCompanyInfo from '../Repetitive/aboutCompanyInfo';
 
 function ShopXiaomiMain() {
 
