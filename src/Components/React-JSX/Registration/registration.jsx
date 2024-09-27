@@ -27,9 +27,10 @@ function Registration() {
         setPost({ ...post, [e.target.name]: e.target.value })
     }
 
-    const [userData, setUserData] = useState([]);
+    const [warningAlert, setWarningAlert] = useState(true);
+    const [userData, setUserData] = useState("");
 
-    // console.log(userData);
+    console.log(warningAlert);
 
 
 
@@ -53,7 +54,7 @@ function Registration() {
 
     return (
         <>
-            <NavBar userData={userData} />
+            <NavBar />
             <div className="banner w-full h-48 flex items-center justify-center bg-gray-100">
                 <h1 className='text-4xl font-bold text-gray-700'>Registration</h1>
             </div>
@@ -64,6 +65,13 @@ function Registration() {
                     <li>Registration</li>
                 </ul>
                 <hr />
+                <div className={warningAlert == true ? 'warningAlert w-full flex items-center p-5 bg-yellow-200 h-40 mt-5' : `hidden`}>
+                    <div>
+                        <i className="fa-regular fa-circle-xmark absolute right-80 mr-8 text-2xl text-gray-700 hover: cursor-pointer" onClick={() => setWarningAlert(false)}></i>
+                        <h1 className='text-xl font-semibold mb-3'>Password must be 6 or more characters long !</h1>
+                        <p className='font-medium'>Safety during shooting is ensured !</p>
+                    </div>
+                </div>
             </MainContainer>
             <div className="registrationDiv flex w-full h-auto items-center justify-center mt-5 mb-10">
                 <div className="formBox">

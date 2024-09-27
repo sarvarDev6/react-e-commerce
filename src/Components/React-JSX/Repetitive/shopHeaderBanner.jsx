@@ -34,7 +34,7 @@ function ShopHeaderBanner() {
                                 <Link to="/shop/phones/infinix"><li className='flex items-center text-gray-700'><BiChevronRight /> Infinix</li></Link>
                             </ul>
                         </div>
-                        <img className='w-28' src={shopBannerPhones}></img>
+                        <img className='w-28' src={shopBannerPhones} alt='img'></img>
                     </div>
                     <div className="tablets flex items-start justify-between p-5">
                         <div>
@@ -45,20 +45,20 @@ function ShopHeaderBanner() {
                                 <Link to="/shop/tablets/apple"><li className='flex items-center text-gray-700'><BiChevronRight /> Apple</li></Link>
                             </ul>
                         </div>
-                        <img className='w-28' src={shopBannerTablets}></img>
+                        <img className='w-28' src={shopBannerTablets} alt='img'></img>
                     </div>
                     <div className="laptops flex items-start justify-between p-5">
                         <div>
                             <Link to="/shop/laptops"><h1 className='text-xl font-bold mb-5 hover: cursor-pointer'>Laptops</h1></Link>
                             <ul>
                                 <Link to="/shop/laptops/mac-book"><li className='flex items-center text-gray-700'><BiChevronRight /> MacBook</li></Link>
-                                <Link to="/shop/samsung-tablets"><li className='flex items-center text-gray-700'><BiChevronRight /> MSI</li></Link>
+                                <Link to="/shop/laptops/msi"><li className='flex items-center text-gray-700'><BiChevronRight /> MSI</li></Link>
                                 <Link to="/shop/samsung-tablets"><li className='flex items-center text-gray-700'><BiChevronRight /> HP</li></Link>
                                 <Link to="/shop/apple-tablets"><li className='flex items-center text-gray-700'><BiChevronRight /> Acer</li></Link>
                                 <Link to="/shop/apple-tablets"><li className='flex items-center text-gray-700'><BiChevronRight /> Lenovo</li></Link>
                             </ul>
                         </div>
-                        <img className='w-28' src={shopBannerLaptops}></img>
+                        <img className='w-28' src={shopBannerLaptops} alt='img'></img>
                     </div>
                 </div>
             </MainContainer>

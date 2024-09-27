@@ -28,14 +28,14 @@ function Footer() {
                             <p className='text-gray-500 leading-7 mb-5'>OPENSHOP.UZ online store with a large selection of electronics in wholesale and retail</p>
                             <h2 className='font-bold text-gray-600 mb-2 hover: cursor-pointer'>+998 (71) 203 66 60</h2>
                             <h2 className='font-bold text-gray-600 mb-2 hover: cursor-pointer'>+998 (99) 200 66 60</h2>
-                            <a href='mailto:info@openshop.uz' target='_blank'><h2 className='font-bold text-gray-600 mb-5 hover: cursor-pointer'>info@openshop.uz</h2></a>
+                            <a href='mailto:info@openshop.uz' target='_blank' rel="noreferrer"><h2 className='font-bold text-gray-600 mb-5 hover: cursor-pointer'>info@openshop.uz</h2></a>
                             <div className="socialChannels flex justify-center gap-2">
-                                <a href="https://www.facebook.com/openshop.uz" target='_blank'>
+                                <a href="https://www.facebook.com/openshop.uz" target='_blank' rel="noreferrer">
                                     <div className="facebook bg-blue-700 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
                                         <i className="fa-brands fa-facebook"></i>
                                     </div>
                                 </a>
-                                <a href="https://t.me/openshop_uz" target='_blank'>
+                                <a href="https://t.me/openshop_uz" target='_blank' rel="noreferrer">
                                     <div className="telegram bg-teal-400 pt-1 pb-1 pl-2 pr-2 rounded-full text-white hover: cursor-pointer">
                                         <i className="fa-brands fa-telegram"></i>
                                     </div>
@@ -61,7 +61,7 @@ function Footer() {
                     <div className="usefulLinks">
                         <h1 className='font-semibold mb-5'>USEFUL LINKS</h1>
                         <ul className='leading-9'>
-                            <li className='text-gray-700 hover: cursor-pointer'>Our addresses</li>
+                            <Link to="/our/locations"><li className='text-gray-700 hover: cursor-pointer'>Our addresses</li></Link>
                             <li className='text-gray-700 hover: cursor-pointer'>Site offer</li>
                             <li className='text-gray-700 hover: cursor-pointer'>Service centers</li>
                             <li className='text-gray-700 hover: cursor-pointer'>Terms of the affiliate system</li>
@@ -76,13 +76,13 @@ function Footer() {
                             <li className='text-gray-700 hover: cursor-pointer'>Order History</li>
                             <li className='text-gray-700 hover: cursor-pointer'>Support Policy</li>
                             <li className='text-gray-700 hover: cursor-pointer'>Partner System</li>
-                            <li className='text-gray-700 hover: cursor-pointer'>Categories</li>
+                            <Link to="/shop/categories"><li className='text-gray-700 hover: cursor-pointer'>Categories</li></Link>
                             <li className='text-gray-700 hover: cursor-pointer'>Brands</li>
                             <li className='text-gray-700 hover: cursor-pointer'>Blog</li>
                         </ul>
                     </div>
                     <div className="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2995.4909714430437!2d69.35799207654125!3d41.34168099882829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDIwJzMwLjAiTiA2OcKwMjEnMzguMCJF!5e0!3m2!1sen!2s!4v1725558366671!5m2!1sen!2s" width="380" height="300" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe title='open-shop-address' src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2995.4909714430437!2d69.35799207654125!3d41.34168099882829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDIwJzMwLjAiTiA2OcKwMjEnMzguMCJF!5e0!3m2!1sen!2s!4v1725558366671!5m2!1sen!2s" width="380" height="300" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         <h3 className='mt-5 w-96 leading-5 font-light'>Address: Republic of Uzbekistan, Tashkent city, Mirzo-Ulugbek district, Buyuk Ipak Yuli street, 302</h3>
                     </div>
                 </div>

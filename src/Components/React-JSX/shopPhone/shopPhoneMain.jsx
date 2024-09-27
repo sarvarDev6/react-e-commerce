@@ -20,6 +20,35 @@ import AboutCompanyInfo from '../Repetitive/aboutCompanyInfo';
 
 function ShopPhoneMain() {
 
+    const handleAddToCart = (item) => {
+        const cartItem = {
+            img_1: item.img_1,
+            img_2: item.img_2,
+            img_3: item.img_3,
+            brand_name: item.brand_name,
+            brand_logo: item.brand_logo,
+            name: item.name,
+            price: item.price,
+            category: item.category,
+            discount: item.discount
+        };
+
+        console.log(item)
+
+        axios
+            .post("http://127.0.0.1:8000/api/cart/add", JSON.stringify(cartItem), {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((res) => {
+                console.log("Product added to cart successfully", res.data);
+            })
+            .catch((error) => {
+                console.error("Error adding product to cart", error);
+            });
+    }
+
     const navigate = useNavigate();
 
     const handleProductClick = (item) => {
@@ -62,13 +91,16 @@ function ShopPhoneMain() {
                             }).map(item => (
                                 <div key={item.id} className='product text-center'>
                                     <div className='flex'>
-                                        <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
-                                        <img className='productWarranty w-14' src={warrantyForTenYears}></img>
+                                        <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1} alt='img'></img>
+                                        <img className='productWarranty w-14' src={warrantyForTenYears} alt='img'></img>
                                     </div>
                                     <span className='text-gray-500 font-bold'>{item.category}</span>
                                     <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
                                     <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
-                                    <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
+                                    <button className='text-xs' onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleAddToCart(item);
+                                    }}><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
                                 </div>
                             ))
                         }

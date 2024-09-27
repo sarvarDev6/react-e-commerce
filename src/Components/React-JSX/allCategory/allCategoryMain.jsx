@@ -1,53 +1,66 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+import "../../Stylesheets/allCategory/allCategoryMain.scss";
 
 function AllCategoryMain() {
     return (
         <main>
             <div className="phoneAndTab mb-10">
                 <h1 className='text-center mb-5 text-3xl font-semibold'>Phones and Tablets</h1>
-                <h2 className='mb-3 text-xl font-semibold'>Phones</h2>
+                <Link to="/shop/phones">
+                    <h2 className='mb-3 text-xl font-semibold' style={{
+                        color: "#ff6117"
+                    }}>Phones</h2>
+                </Link>
                 <div className="phonesCate flex gap-80 mb-5">
                     <ul>
-                        <li>Xiaomi</li>
+                        <Link to="/shop/phones/xiaomi"><li>Xiaomi</li></Link>
                         <li>Huawei</li>
                         <li>Novey Mobile</li>
-                        <li>Tecno</li>
+                        <Link to="/shop/phones/tecno"><li>Tecno</li></Link>
                         <li>ZTE</li>
                     </ul>
                     <ul>
-                        <li>Samsung</li>
+                        <Link to="/shop/phones/samsung"><li>Samsung</li></Link>
                         <li>Nokia</li>
                         <li>Blackview</li>
                         <li>Oppo</li>
                         <li>Oukitel</li>
                     </ul>
                     <ul>
-                        <li>Apple</li>
+                        <Link to="/shop/phones/apple"><li>Apple</li></Link>
                         <li>Realme</li>
-                        <li>Honor</li>
-                        <li>Infinix</li>
+                        <Link to="/shop/phones/honor"><li>Honor</li></Link>
+                        <Link to="/shop/phones/infinix"><li>Infinix</li></Link>
                         <li>Doogee</li>
                     </ul>
                 </div>
-                <h2 className='mb-3 text-xl font-semibold'>Tablets</h2>
+                <Link to="/shop/tablets">
+                    <h2 className='mb-3 text-xl font-semibold' style={{
+                        color: "#ff6117"
+                    }}>Tablets</h2>
+                </Link>
                 <div className="tabletCate flex gap-80">
                     <ul>
-                        <li>Xiaomi</li>
+                        <Link to="/shop/tablets/xiaomi"><li>Xiaomi</li></Link>
                         <li>Other tablets</li>
                     </ul>
                     <ul>
-                        <li>Samsung</li>
+                        <Link to="/shop/tablets/samsung"><li>Samsung</li></Link>
                         <li>Oukitel</li>
                     </ul>
                     <ul>
-                        <li>Apple</li>
+                        <Link to="/shop/tablets/apple"><li>Apple</li></Link>
                         <li>Huawei</li>
                     </ul>
                 </div>
             </div>
             <div className="pcEquipment">
                 <h1 className='text-center mb-5 text-3xl font-semibold'>Computers and office equipment</h1>
-                <h2 className='mb-3 text-xl font-semibold'>Laptops</h2>
+                <Link to="/shop/laptops"><h2 className='mb-3 text-xl font-semibold' style={{
+                    color: "#ff6117"
+                }}>Laptops</h2></Link>
                 <div className="laptopCate flex gap-80 mb-5">
                     <ul>
                         <li>For work, education and games</li>
@@ -56,7 +69,9 @@ function AllCategoryMain() {
                         <li>For games</li>
                     </ul>
                 </div>
-                <h2 className='mb-3 text-xl font-semibold'>PC bulding</h2>
+                <h2 className='mb-3 text-xl font-semibold' style={{
+                    color: "#ff6117"
+                }}>PC bulding</h2>
                 <div className="tabletCate flex gap-80 mb-5">
                     <ul>
                         <li>Motherboard</li>
@@ -77,7 +92,9 @@ function AllCategoryMain() {
                         <li>Hard drives</li>
                     </ul>
                 </div>
-                <h2 className='mb-3 text-xl font-semibold'>PC peripherals</h2>
+                <h2 className='mb-3 text-xl font-semibold' style={{
+                    color: "#ff6117"
+                }}>PC peripherals</h2>
                 <div className="tabletCate flex gap-80 mb-5">
                     <ul>
                         <li>Microphones</li>

@@ -1,7 +1,6 @@
 // Called React Libraries
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 // Stylesheet for this file
 import "../../Stylesheets/navBar.scss"
@@ -17,14 +16,23 @@ import openShopLogo from "../../Local-Images/open-shop-logo.png";
 
 function NavBar() {
 
-
     const [cartData, setCartData] = useState([]);
 
+
     // Main Product Data's API URL
+    let [url] = useState("http://127.0.0.1:8000/api/cart");
+    const fetchTrip = useCallback(async () => {
+        const req = await fetch(url);
+        const data = await req.json();
+        setCartData(data);
+    }, [cartData]);
+
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/cart')
-            .then(res => setCartData(res.data))
-    }, []);
+        fetchTrip();
+    }, [fetchTrip]);
+
+
+
 
 
 
@@ -35,7 +43,7 @@ function NavBar() {
                     <div className="topOption flex w-full h-16 justify-between items-center">
                         <h1>SALE OF ELECTRONICS AT <b>THE BEST PRICES</b></h1>
                         <div className="registration flex gap-6">
-                            <a href="https://t.me/openshopuz_bot" target='_blank'><h2 className='hover: cursor-pointer'>Telegram Bot</h2></a>
+                            <a href="https://t.me/openshopuz_bot" target='_blank' rel="noreferrer"><h2 className='hover: cursor-pointer'>Telegram Bot</h2></a>
                             <div className="registerBtn flex gap-2">
                                 <Link to="/user/login"><h2 className='hover: cursor-pointer'><i className="fa-regular fa-user"></i> Login</h2></Link> /
                                 <Link to="/user/registration"><h2 className='hover: cursor-pointer'>Registration</h2></Link>
@@ -126,7 +134,7 @@ function NavBar() {
                                                     <h2 className='font-semibold text-xl relative'>Laptops</h2>
                                                     <ol>
                                                         <Link to="/shop/laptops/mac-book"><li>MacBook</li></Link>
-                                                        <li>MSI</li>
+                                                        <Link to="/shop/laptops/msi"><li>MSI</li></Link>
                                                         <li>HP</li>
                                                         <li>Acer</li>
                                                         <li>Lenovo</li>
@@ -135,61 +143,35 @@ function NavBar() {
                                             </div>
                                             <hr />
                                             <div className="liDiv-4">
-                                                <li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-regular fa-clock text-gray-600"></i> Watches</span> <i className="fa-solid fa-chevron-right text-xs"></i></li>
+                                                <Link to="/shop/watches"><li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-regular fa-clock text-gray-600"></i> Watches</span> <i className="fa-solid fa-chevron-right text-xs"></i></li></Link>
                                                 <div className="watchMoreCategory w-72 bg-white p-5 absolute ml-72">
                                                     <h2 className='font-semibold text-xl relative'>Watches</h2>
                                                     <ol>
-                                                        <li>Xiaomi</li>
                                                         <li>Apple</li>
                                                         <li>Samsung</li>
-                                                        <li>Honor</li>
-                                                        <li>Tecno</li>
-                                                        <li>Infinix</li>
                                                     </ol>
                                                 </div>
                                             </div>
                                             <hr />
                                             <div className="liDiv-5">
-                                                <li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-headphones-simple text-gray-600"></i> Accessurs and gadgets</span> <i className="fa-solid fa-chevron-right text-xs"></i></li>
-                                                <div className="accessuarMoreCategory w-72 bg-white p-5 absolute ml-72">
-                                                    <h2 className='font-semibold text-xl relative'>Accessuars and gadgets</h2>
-                                                    <ol>
-                                                        <li>Xiaomi</li>
-                                                        <li>Apple</li>
-                                                        <li>Samsung</li>
-                                                        <li>Honor</li>
-                                                        <li>Tecno</li>
-                                                        <li>Infinix</li>
-                                                    </ol>
-                                                </div>
+                                                <li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-headphones-simple text-gray-600"></i> Accessurs and gadgets</span></li>
                                             </div>
                                             <hr />
                                             <div className="liDiv-6">
-                                                <li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-screwdriver-wrench text-gray-600"></i> PC Equipment</span> <i className="fa-solid fa-chevron-right text-xs"></i></li>
-                                                <div className="equipmentMoreCategory w-72 bg-white p-5 absolute ml-72">
-                                                    <h2 className='font-semibold text-xl relative'>PC equipment</h2>
-                                                    <ol>
-                                                        <li>Xiaomi</li>
-                                                        <li>Apple</li>
-                                                        <li>Samsung</li>
-                                                        <li>Honor</li>
-                                                        <li>Tecno</li>
-                                                        <li>Infinix</li>
-                                                    </ol>
-                                                </div>
+                                                <li className='font-bold hover: cursor-pointer p-2'><span><i className="fa-solid fa-screwdriver-wrench text-gray-600"></i> PC Equipment</span></li>
                                             </div>
                                         </ol>
                                     </div>
                                 </div>
                             </div>
                             <ul className='flex gap-7'>
-                                <Link to="/"><li className={window.location.pathname == '/' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Home</li></Link>
-                                <Link to="/shop/categories"><li className={window.location.pathname == '/shop/categories' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Site Map</li></Link>
-                                <Link to="/shop/installment"><li className={window.location.pathname == '/shop/installment' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Installment</li></Link>
-                                <Link to="/our/locations"><li className={window.location.pathname == '/our/locations' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Our Locations</li></Link>
+                                <Link to="/"><li className={window.location.pathname === '/' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Home</li></Link>
+                                <Link to="/shop/categories"><li className={window.location.pathname === '/shop/categories' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Site Map</li></Link>
+                                <Link to="/shop/installment"><li className={window.location.pathname === '/shop/installment' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Installment</li></Link>
+                                <Link to="/our/locations"><li className={window.location.pathname === '/our/locations' ? `active hover: cursor-pointer` : 'hover: cursor-pointer'}>Our Locations</li></Link>
                             </ul>
                         </div>
-                        <Link to="/shop/phones"><h1 className='phonesCate text-2xl font-semibold hover: cursor-pointer'><i className="fa-solid fa-mobile text-2xl"></i> Phones</h1></Link>
+                        <Link to="/shop/phones/"><h1 className='phonesCate text-2xl font-semibold hover: cursor-pointer'><i className="fa-solid fa-mobile text-2xl"></i> Phones</h1></Link>
                     </div>
                 </MainContainer>
             </nav>

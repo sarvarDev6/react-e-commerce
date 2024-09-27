@@ -1,9 +1,11 @@
 import "./App.css";
 import { FaTelegram } from "react-icons/fa";
 import { FaChevronUp } from "react-icons/fa6";
-
 import { Routes, Route } from "react-router-dom";
-import Index from "./Components/React-JSX/Index";
+
+
+// All used components in Route row
+import Index from "./Components/React-JSX/Index"; // Main Component (Home page)
 import ShopXiaomi from "./Components/React-JSX/shopXiaomi/shopXiaomi";
 import ShopSamsung from "./Components/React-JSX/shopSamsung/shopSamsung";
 import ShopApple from "./Components/React-JSX/shopApple/shopApple";
@@ -21,13 +23,16 @@ import ShopLaptops from "./Components/React-JSX/shopLaptops/shopLaptops";
 import ShopAppleLap from "./Components/React-JSX/shopAppleLap/shopAppleLap";
 import ToDetail from "./Components/React-JSX/toDetail/toDetail";
 import NotFoundPage from "./Components/React-JSX/notFoundPage";
-import AllCategory from "./Components/React-JSX/allCategory/allCategory";
-import InstallMent from "./Components/React-JSX/Installment/installMent";
-import OurLocations from "./Components/React-JSX/ourLocations/ourLocations";
+import AllCategory from "./Components/React-JSX/allCategory/allCategory"; // Site Map page
+import InstallMent from "./Components/React-JSX/Installment/installMent"; // Installment
+import OurLocations from "./Components/React-JSX/ourLocations/ourLocations"; // Our locations page
 import Cart from "./Components/React-JSX/Cart/cart";
 import Checkout from "./Components/React-JSX/Checkout/checkout";
+import ShopMSILap from "./Components/React-JSX/shopMSILap/shopMSILap";
+import ShopWatches from "./Components/React-JSX/shopWatches/shopWatches";
 
 function App() {
+
   return (
     <>
       <Routes>
@@ -52,6 +57,9 @@ function App() {
 
         <Route path="/shop/laptops" element={<ShopLaptops />} />
         <Route path="/shop/laptops/mac-book" element={<ShopAppleLap />}></Route>
+        <Route path="/shop/laptops/msi" element={<ShopMSILap />}></Route>
+
+        <Route path="/shop/watches" element={<ShopWatches />}></Route>
         {/** All filter page routes - end  */}
 
         {/** Main Pages  */}
@@ -81,7 +89,7 @@ function App() {
           <FaChevronUp />
         </button>
       </a>
-      <a href="https://t.me/wwwopenshopuz" target="_blank">
+      <a href="https://t.me/wwwopenshopuz" target="_blank" rel="noreferrer">
         <button
           className="telegramSupport flex items-center gap-1 p-3 font-bold fixed"
           style={{

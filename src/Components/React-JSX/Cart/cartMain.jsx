@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
@@ -13,10 +13,17 @@ function CartMain() {
     const [cartData, setCartData] = useState([]);
 
     // Main Product Data's API URL
+    let [url] = useState("http://127.0.0.1:8000/api/cart");
+    const fetchTrip = useCallback(async () => {
+        const req = await fetch(url);
+        const data = await req.json();
+        setCartData(data);
+    }, [cartData]);
+
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/cart')
-            .then(res => setCartData(res.data))
-    }, []);
+        fetchTrip();
+    }, [fetchTrip]);
+
 
     let navigate = useNavigate();
 
@@ -31,8 +38,7 @@ function CartMain() {
                     <i className="fa-solid fa-cart-shopping text-4xl mb-5"></i>
                     <h1 className='text-2xl font-semibold mb-6'>Your cart is empty</h1>
                     <p className='text-gray-600 text-xl mb-7'>You can add the products to your cart via the website.</p>
-
-                    <Link to="/shop/installment"><h2 className='flex items-center gap-2 ml-40 text-xl text-orange-500 hover: cursor-pointer'>All Products <i class="fa-solid fa-circle-chevron-right"></i></h2></Link>
+                    <Link to="/shop/installment"><h2 className='flex items-center gap-2 ml-40 text-xl text-orange-500 hover: cursor-pointer'>All Products <i className="fa-solid fa-circle-chevron-right"></i></h2></Link>
                 </div>
             </div> :
                 <div className='cartDiv mt-10'>
@@ -52,7 +58,16 @@ function CartMain() {
                                         <td><img className='w-40' src={item.img_1} alt="img" /></td>
                                         <td>{item.name}</td>
                                         <td>{item.price} UZS</td>
-                                        <td><button className='p-3 rounded-lg text-white bg-red-600'>Delete</button></td>
+                                        <td><button className='p-3 rounded-lg text-white bg-red-600' onClick={(e) => {
+                                            const url = "http://127.0.0.1:8000/api/cart/delete/" + item.id;
+                                            axios.post(url)
+                                                .then(res => {
+                                                    navigate('/user/cart/');
+                                                })
+                                                .catch((e) => {
+                                                    console.log(e);
+                                                })
+                                        }}>Delete</button></td>
                                     </tr>
 
                                 )

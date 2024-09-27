@@ -1,6 +1,7 @@
 // Called React libraries 
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 import MainContainer from '../Repetitive/mainContainer';
 import { useNavigate } from 'react-router-dom';
 
@@ -33,7 +34,7 @@ function ShopAppleLapMain() {
     }, [])
 
     // productData filtering here (xiaomiTab)
-    let appleLapProducts = productData.filter((item) => item.brand_name == "Apple" && item.category == "laptop");
+    let appleLapProducts = productData.filter((item) => item.brand_name === "Apple" && item.category === "laptop");
 
     return (
         <main>
@@ -53,23 +54,34 @@ function ShopAppleLapMain() {
                     </div>
                 </div>
                 <div className="appleLap">
-                    <div className="appleLapProductsContainer flex flex-wrap">
-                        {
-                            appleLapProducts.map(item => (
-                                <div key={item.id} className='product text-center'>
-                                    <div className='flex'>
-                                        <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1}></img>
-                                        <img className='productWarranty w-14' src={warrantyForTenYears}></img>
-                                    </div>
-                                    <span className='text-gray-500 font-bold'>{item.category}</span>
-                                    <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
-                                    <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
-                                    <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
-                                    <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
-                                </div>
-                            ))
-                        }
-                    </div>
+                    {
+                        appleLapProducts == "" ? (
+                            <div>
+                                <i className="fa-solid fa-database text-4xl mb-5"></i>
+                                <h1 className='text-2xl font-semibold mb-6'>There are no products in the database yet :(</h1>
+                                <p className='text-gray-600 text-xl mb-7'>You can buy the products in All Products section, check this out ;).</p>
+                                <Link to="/shop/installment"><h2 className='flex items-center gap-2 ml-40 text-xl text-orange-500 hover: cursor-pointer'>All Products <i className="fa-solid fa-circle-chevron-right"></i></h2></Link>
+                            </div>
+                        ) : (
+                            <div className="appleLapProductsContainer flex flex-wrap">
+                                {
+                                    appleLapProducts.map(item => (
+                                        <div key={item.id} className='product text-center'>
+                                            <div className='flex'>
+                                                <img onClick={() => handleProductClick(item)} className='productImg' src={item.img_1} alt='img'></img>
+                                                <img className='productWarranty w-14' src={warrantyForTenYears} alt='img'></img>
+                                            </div>
+                                            <span className='text-gray-500 font-bold'>{item.category}</span>
+                                            <h1 onClick={() => handleProductClick(item)}>{item.name}</h1>
+                                            <h2 className='font-semibold'>{item.price.toLocaleString(item.price)} UZS</h2>
+                                            <h5>{Math.floor(item.price / 12).toLocaleString(item.price / 12)} UZS /per month</h5>
+                                            <button className='text-xs'><i className="fa-solid fa-cart-arrow-down"></i> TO CART</button>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        )
+                    }
                 </div>
                 <AboutCompanyInfo />
             </MainContainer>
